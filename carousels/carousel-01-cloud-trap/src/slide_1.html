@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide 1: The $100,000 Cloud Trap — Charlton Smith</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap');
+
+    :root {
+      --primary-navy: #002D62;
+      --deep-navy: #010D1E;
+      --royal-blue: #0075C9;
+      --accent-cyan: #00A3E0;
+      --card-bg: #071E3D;
+      --card-border: rgba(0, 163, 224, 0.28);
+      --text-white: #FFFFFF;
+      --text-slate: #CBD5E1;
+      --text-muted: #94A3B8;
+      --danger-red: #EF4444;
+      --danger-bg: rgba(45, 14, 22, 0.7);
+      --danger-border: rgba(239, 68, 68, 0.45);
+      --success-cyan: #00A3E0;
+      --success-bg: rgba(4, 38, 77, 0.85);
+      --success-border: rgba(0, 163, 224, 0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: var(--deep-navy);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: linear-gradient(145deg, #010A17 0%, #001C3D 45%, #002D62 80%, #00427A 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 68px 80px 58px 80px;
+      overflow: hidden;
+    }
+
+    /* Ambient background grid */
+    .bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 117, 201, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 117, 201, 0.07) 1px, transparent 1px);
+      background-size: 44px 44px;
+      pointer-events: none;
+    }
+
+    /* Subtle atmospheric radial glows */
+    .bg-glow-top {
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 580px;
+      height: 580px;
+      background: radial-gradient(circle, rgba(0, 163, 224, 0.18) 0%, rgba(0, 45, 98, 0) 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+
+    .bg-glow-bottom {
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 117, 201, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    /* Header Bar */
+    .slide-header {
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 163, 224, 0.22);
+      padding-bottom: 22px;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 2.5px solid var(--accent-cyan);
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0, 163, 224, 0.35);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-white);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      letter-spacing: 0.5px;
+      margin-top: 3px;
+    }
+
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      background: rgba(0, 45, 98, 0.85);
+      border: 1px solid rgba(0, 163, 224, 0.45);
+      padding: 7px 16px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
+
+    /* Main Body Area */
+    .slide-body {
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+      margin: 24px 0;
+    }
+
+    .eyebrow-pill {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 117, 201, 0.22);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
+    }
+
+    .headline {
+      font-size: 60px;
+      font-weight: 800;
+      line-height: 1.12;
+      color: var(--text-white);
+      letter-spacing: -1.2px;
+    }
+
+    .headline .highlight-trap {
+      color: #F87171;
+    }
+
+    .headline .highlight-cyan {
+      background: linear-gradient(90deg, #00A3E0 0%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-slate);
+      line-height: 1.48;
+    }
+
+    .subtitle strong {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    /* Comparison Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 6px;
+    }
+
+    .story-card {
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      backdrop-filter: blur(12px);
+    }
+
+    .story-card.danger {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+    }
+
+    .story-card.success {
+      background: var(--success-bg);
+      border: 1.5px solid var(--success-border);
+      box-shadow: 0 12px 35px rgba(0, 117, 201, 0.28);
+    }
+
+    .card-badge {
+      align-self: flex-start;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 13px;
+      border-radius: 20px;
+    }
+
+    .story-card.danger .card-badge {
+      background: rgba(239, 68, 68, 0.25);
+      color: #FCA5A5;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .story-card.success .card-badge {
+      background: rgba(0, 117, 201, 0.35);
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .card-text {
+      font-size: 16px;
+      color: var(--text-slate);
+      line-height: 1.5;
+    }
+
+    .card-outcome {
+      margin-top: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .story-card.danger .card-outcome { color: #FCA5A5; }
+    .story-card.success .card-outcome { color: var(--accent-cyan); }
+
+    /* Bottom Hook Box */
+    .hook-callout {
+      background: linear-gradient(90deg, rgba(0, 45, 98, 0.9) 0%, rgba(0, 117, 201, 0.35) 100%);
+      border-left: 5px solid var(--accent-cyan);
+      padding: 22px 28px;
+      border-radius: 0 12px 12px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hook-callout-text {
+      font-size: 19px;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .hook-callout-text strong {
+      color: var(--accent-cyan);
+    }
+
+    .hook-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 800;
+      color: #FFFFFF;
+      background: var(--royal-blue);
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    /* Footer Bar */
+    .slide-footer {
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(0, 163, 224, 0.22);
+      padding-top: 22px;
+    }
+
+    .footer-left {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .footer-swipe {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .footer-swipe .arrow {
+      font-size: 18px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="bg-grid"></div>
+    <div class="bg-glow-top"></div>
+    <div class="bg-glow-bottom"></div>
+
+    <!-- Header with mini portrait & branding -->
+    <div class="slide-header">
+      <div class="header-brand">
+        <img class="brand-avatar" src="profile_picture.png" alt="Charlton Smith">
+        <div class="brand-text">
+          <span class="brand-name">Charlton Smith</span>
+          <span class="brand-title">Open Lakehouse Architect &amp; Advisory</span>
+        </div>
+      </div>
+      <div class="slide-counter">01 / 10</div>
+    </div>
+
+    <!-- Main Narrative Hook -->
+    <div class="slide-body">
+      <div class="eyebrow-pill">
+        <span class="eyebrow-dot"></span>
+        An Honest Conversation for Leadership
+      </div>
+
+      <h1 class="headline">
+        The <span class="highlight-trap">$100,000</span> Cloud Trap:<br>
+        <span class="highlight-cyan">How Smart Companies Over-Pay for Data.</span>
+      </h1>
+
+      <p class="subtitle">
+        A simple story of how businesses flock to the <strong>"new cloud thing,"</strong> blow their budgets, and end up inventing benefits to justify the invoice.
+      </p>
+
+      <div class="card-grid">
+        <div class="story-card danger">
+          <div class="card-badge">The Enterprise Hype</div>
+          <div class="card-title">Proprietary Lock-In</div>
+          <p class="card-text">
+            Snowflake credits + expensive consultants + paid wrappers around SQL + per-seat viewer taxes.
+          </p>
+          <div class="card-outcome">&bull; Constant Bill Shock</div>
+        </div>
+
+        <div class="story-card success">
+          <div class="card-badge">The Sensible Path</div>
+          <div class="card-title">Simple, Open &amp; Owned</div>
+          <p class="card-text">
+            Open cloud storage + in-process speed + zero per-seat taxes. Managed by mid-level engineers.
+          </p>
+          <div class="card-outcome">&bull; 85–95% OpEx Retained</div>
+        </div>
+      </div>
+
+      <div class="hook-callout">
+        <div class="hook-callout-text">
+          Before your company signs its next <strong>6-figure cloud data renewal</strong>, read this 10-slide breakdown.
+        </div>
+        <div class="hook-tag">Zero Jargon</div>
+      </div>
+    </div>
+
+    <!-- Footer with Swipe Prompt -->
+    <div class="slide-footer">
+      <div class="footer-left">By Charlton Smith &bull; For Founders, CEOs &amp; CFOs</div>
+      <div class="footer-swipe">
+        <span>Swipe to follow story</span>
+        <span class="arrow">&rarr;</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlton Smith — Enterprise Open Source Transformation Partner</title>
+  <meta name="description" content="Helping busy mid-market companies win back time and operational efficiency with production-ready Open Source software on their private cloud. Turnkey sprints and 24/7 managed retainers.">
+  <style>
+    :root {
+      --navy-dark: #010A17;
+      --navy-primary: #002D62;
+      --navy-card: #071A36;
+      --blue-royal: #0075C9;
+      --cyan-accent: #00A3E0;
+      --text-white: #FFFFFF;
+      --text-slate: #94A3B8;
+      --text-muted: #CBD5E1;
+      --border-subtle: rgba(0, 163, 224, 0.25);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--navy-dark);
+      color: var(--text-white);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container & Layout */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    header {
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      background: rgba(1, 10, 23, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1.5px solid var(--cyan-accent);
+      object-fit: cover;
+    }
+    .logo span { color: var(--cyan-accent); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--cyan-accent); }
+    .btn-nav {
+      background: linear-gradient(90deg, var(--blue-royal) 0%, #005A9E 100%);
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(0, 163, 224, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(0, 117, 201, 0.25) 0%, rgba(1, 10, 23, 0) 70%);
+      pointer-events: none;
+    }
+
+    /* Author Badge Pill */
+    .hero-author-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(7, 26, 54, 0.85);
+      border: 1px solid var(--border-subtle);
+      padding: 6px 18px 6px 8px;
+      border-radius: 40px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .hero-author-pill .author-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--cyan-accent);
+      object-fit: cover;
+    }
+    .hero-author-pill span {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    .hero-author-pill strong {
+      color: #FFFFFF;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 45, 98, 0.7);
+      border: 1px solid var(--cyan-accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--cyan-accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(90deg, #FFFFFF 0%, var(--cyan-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 18.5px;
+      color: var(--text-muted);
+      max-width: 740px;
+      margin: 0 auto 36px;
+      line-height: 1.55;
+    }
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 44px;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, var(--blue-royal) 0%, #005A9E 100%);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0, 117, 201, 0.4);
+      border: 1px solid var(--cyan-accent);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(0, 117, 201, 0.6);
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      color: var(--text-slate);
+      font-size: 13.5px;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+    .trust-badges span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-badges .check { color: var(--cyan-accent); }
+
+    /* Reality / The Enemy Section */
+    .section-reality {
+      padding: 90px 0;
+      border-top: 1px solid var(--border-card);
+      background: linear-gradient(180deg, #010A17 0%, #021229 100%);
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .section-title p {
+      color: var(--text-slate);
+      font-size: 17px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .pain-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .pain-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 32px;
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+    .pain-card:hover {
+      border-color: var(--border-subtle);
+    }
+    .pain-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: #EF4444;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .pain-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+    .pain-card p {
+      font-size: 14.5px;
+      color: var(--text-slate);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+    .pain-card .solution-line {
+      font-size: 13.5px;
+      color: var(--cyan-accent);
+      font-weight: 600;
+      border-top: 1px solid var(--border-card);
+      padding-top: 14px;
+    }
+
+    /* 8 Operational Domains Grid */
+    .section-domains {
+      padding: 90px 0;
+      border-top: 1px solid var(--border-card);
+    }
+    .domains-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .domain-card {
+      background: rgba(7, 26, 54, 0.6);
+      border: 1px solid var(--border-card);
+      border-radius: 10px;
+      padding: 24px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .domain-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyan-accent);
+    }
+    .domain-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .domain-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .domain-card .replaces {
+      font-size: 12px;
+      color: #EF4444;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .domain-card p {
+      font-size: 13px;
+      color: var(--text-slate);
+      line-height: 1.45;
+    }
+
+    /* 3-Step Process */
+    .section-process {
+      padding: 90px 0;
+      border-top: 1px solid var(--border-card);
+    }
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .step-box {
+      background: var(--navy-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 36px 28px;
+      position: relative;
+    }
+    .step-num {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--cyan-accent);
+      margin-bottom: 12px;
+    }
+    .step-box h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .step-box p {
+      font-size: 14px;
+      color: var(--text-slate);
+      line-height: 1.5;
+    }
+
+    /* About Charlton Section */
+    .section-about {
+      padding: 90px 0;
+      border-top: 1px solid var(--border-card);
+      background: linear-gradient(180deg, #010A17 0%, #03152E 100%);
+    }
+    .about-card {
+      background: rgba(7, 26, 54, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .about-avatar {
+      width: 220px;
+      height: 220px;
+      border-radius: 16px;
+      border: 2px solid var(--cyan-accent);
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 163, 224, 0.25);
+    }
+    .about-content-col h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .about-role {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cyan-accent);
+      margin-bottom: 18px;
+    }
+    .about-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .about-badges {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--cyan-accent);
+      flex-wrap: wrap;
+    }
+
+    /* Interactive Audit Booking Form */
+    .section-audit {
+      padding: 100px 0;
+      border-top: 1px solid var(--border-card);
+      background: linear-gradient(135deg, #010A17 0%, #001A3D 50%, #002D62 100%);
+    }
+    .audit-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: rgba(7, 26, 54, 0.95);
+      border: 1px solid var(--cyan-accent);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    .audit-card h2 {
+      font-size: 30px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .audit-card p.subtitle {
+      text-align: center;
+      color: var(--text-slate);
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(1, 10, 23, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: #fff;
+      font-size: 15px;
+      font-family: inherit;
+      line-height: 1.5;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-control:focus {
+      border-color: var(--cyan-accent);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(1, 10, 23, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .checkbox-item input { accent-color: var(--cyan-accent); }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(90deg, var(--blue-royal) 0%, #005A9E 100%);
+      color: #fff;
+      padding: 18px;
+      border: 1px solid var(--cyan-accent);
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 24px;
+      box-shadow: 0 10px 25px rgba(0, 117, 201, 0.4);
+      transition: transform 0.2s ease;
+    }
+    .btn-submit:hover { transform: translateY(-2px); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-card);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-slate);
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 36px; }
+      .pain-cards, .domains-grid, .steps-row { grid-template-columns: 1fr; }
+      .checkbox-grid { grid-template-columns: 1fr; }
+      .audit-card { padding: 28px 20px; }
+      .nav-links { display: none; }
+      .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .about-avatar {
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+      }
+      .about-badges {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <img src="assets/profile_picture.png" alt="Charlton Smith" class="logo-avatar">
+        Charlton <span>Smith</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#domains">Transformation Domains</a>
+        <a href="#process">How It Works</a>
+        <a href="#about">About Charlton</a>
+        <a href="#audit" class="btn-nav">Book Stack Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-author-pill">
+        <img src="assets/profile_picture.png" alt="Charlton Smith" class="author-img">
+        <span>Led by <strong>Charlton Smith</strong> &bull; Enterprise Open Source Partner</span>
+      </div>
+      <br>
+      <div class="eyebrow">Enterprise Open Source Transformation</div>
+      <h1>
+        Win Back Time &amp; Operational Efficiency.<br>
+        <span class="highlight">Zero Enterprise Software Drag.</span>
+      </h1>
+      <p>
+        We help growing mid-market companies (50–500 staff) replace rigid, overpriced enterprise software with clean, fast Open Source systems—tailored to your exact workflow, deployed in 2 to 4 weeks, and managed 24/7.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#audit" class="btn-primary">
+          <span>Book Your 48-Hour Stack Audit</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+      <div class="trust-badges">
+        <span><span class="check">&#10003;</span> Zero Per-Seat User Limits</span>
+        <span><span class="check">&#10003;</span> 100% Private Cloud Ownership</span>
+        <span><span class="check">&#10003;</span> 24/7 Managed Retainer Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reality / The Enemy -->
+  <section class="section-reality">
+    <div class="container">
+      <div class="section-title">
+        <h2>You Didn’t Build Your Business to Fit Inside a Vendor's Box</h2>
+        <p>Enterprise SaaS promises agility, but delivers administrative drag, seat rationing, and rising annual bills.</p>
+      </div>
+      <div class="pain-cards">
+        <div class="pain-card">
+          <div class="pain-tag">Friction #1</div>
+          <h3>The Seat Rationing Tax</h3>
+          <p>Warehouse dispatchers and operations staff are forced onto whiteboards and stale spreadsheets because corporate IT hit the license cap on Power BI or Salesforce.</p>
+          <div class="solution-line">&rarr; Fix: Unlimited users &amp; wall-mounted touchscreens with zero per-seat fees.</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-tag">Friction #2</div>
+          <h3>The Growth Penalties</h3>
+          <p>Every time your sales pipeline triggers more automations or order volume spikes, vendors penalize you with surprise monthly task and volume overages.</p>
+          <div class="solution-line">&rarr; Fix: High-capacity automation pipelines with zero per-task meters.</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-tag">Friction #3</div>
+          <h3>14-Click Feature Bloat</h3>
+          <p>Paying for bloated enterprise tiers where 80% of the features are never touched, while the 20% your team actually needs requires endless manual workarounds.</p>
+          <div class="solution-line">&rarr; Fix: Clean, fast web portals built around your exact operational steps.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Operational Domains -->
+  <section class="section-domains" id="domains">
+    <div class="container">
+      <div class="section-title">
+        <h2>The 8 Operational Transformation Domains</h2>
+        <p>Production-ready Open Source infrastructure deployed inside your own private cloud.</p>
+      </div>
+      <div class="domains-grid">
+        <div class="domain-card">
+          <div class="domain-icon">&#128202;</div>
+          <h4>BI &amp; Reporting</h4>
+          <div class="replaces">Replaces Power BI / Snowflake</div>
+          <p>Sub-second dashboards directly on your cloud storage with zero per-seat viewer taxes.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#9881;</div>
+          <h4>Workflow Automation</h4>
+          <div class="replaces">Replaces Zapier / Workato</div>
+          <p>Enterprise pipelines with unlimited execution steps and zero per-task penalties.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#128101;</div>
+          <h4>CRM &amp; Lead Ops</h4>
+          <div class="replaces">Replaces Salesforce / HubSpot</div>
+          <p>Streamlined sales pipelines with 100% data ownership and zero per-seat sales taxes.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#128179;</div>
+          <h4>Invoicing &amp; Revenue</h4>
+          <div class="replaces">Replaces Chargebee / Billing Add-ons</div>
+          <p>Automated recurring billing, invoicing, and dunning with zero platform percentage cuts.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#128666;</div>
+          <h4>Fleet &amp; Logistics</h4>
+          <div class="replaces">Replaces Samsara / Geotab</div>
+          <p>Real-time GPS tracking, dispatch routing, and telemetry with zero per-vehicle fees.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#128722;</div>
+          <h4>E-Commerce &amp; B2B</h4>
+          <div class="replaces">Replaces Shopify Plus / Magento</div>
+          <p>High-speed B2B wholesale portals and ordering apps with zero transaction cuts.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#128269;</div>
+          <h4>Observability &amp; Logs</h4>
+          <div class="replaces">Replaces Datadog / New Relic</div>
+          <p>Unified logs, metrics, and error tracing with zero unpredictable volume spike invoices.</p>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">&#128187;</div>
+          <h4>Internal Portals</h4>
+          <div class="replaces">Replaces Retool Enterprise</div>
+          <p>Custom frontline inventory screens and dispatch tablets with zero user caps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Walkthrough Section (Temporarily commented out until YouTube episode launch)
+  <section class="section-video" id="case-study">
+    <div class="container">
+      <div class="section-title">
+        <h2>See It in Action: The Vanguard Supply Co. Walkthrough</h2>
+        <p>Watch how a $35M distributor eliminated dispatch whiteboards with a private-cloud analytics portal. Zero CLI commands. Zero technical jargon.</p>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-placeholder">
+          <div class="play-btn">&#9658;</div>
+          <h3>"The Whiteboard in the Warehouse" (Runtime: 9:30)</h3>
+          <p style="color:var(--text-slate); font-size:14px;">Episode 1: Live software walkthrough of the executive iPad portal &amp; floor supervisor tablet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- 3-Step Delivery Flywheel -->
+  <section class="section-process" id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2>How We Transform Your Operations</h2>
+        <p>A turnkey implementation model designed for busy executives.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-box">
+          <div class="step-num">01</div>
+          <h3>48-Hour Stack Audit</h3>
+          <p>We review your top 3 software expense lines and operational bottlenecks. We project your exact time savings and 3-year TCO reduction.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">02</div>
+          <h3>2–4 Week Turnkey Sprint</h3>
+          <p>We stand up the open-source infrastructure inside your private cloud, customize it to your exact workflow, migrate your data, and onboard your team.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">03</div>
+          <h3>Managed Infrastructure Retainer</h3>
+          <p>We handle 24/7 uptime monitoring, security patching, automated backups, and SLA support so leadership never worries about IT infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Charlton Smith Section -->
+  <section class="section-about" id="about">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-grid">
+          <div class="about-img-col">
+            <img src="assets/profile_picture.png" alt="Charlton Smith" class="about-avatar">
+          </div>
+          <div class="about-content-col">
+            <div class="eyebrow" style="margin-bottom:12px;">Your Transformation Partner</div>
+            <h2>Charlton Smith</h2>
+            <p class="about-role">Enterprise Open Source Architect &amp; Fractional Infrastructure Partner</p>
+            <p class="about-desc">
+              "Most business owners I talk to aren’t looking for 'cheap software.' They have healthy budgets. What they are completely fed up with is the massive drain on time, operational speed, and control caused by rigid enterprise SaaS contracts.
+            </p>
+            <p class="about-desc">
+              We don't hand you a GitHub link and wish you luck. We deploy, harden, and customize battle-tested open source systems on your private cloud in 2 to 4 weeks—and we maintain them 24/7 on an ongoing retainer so you never have to think about IT infrastructure."
+            </p>
+            <div class="about-badges">
+              <span>&#10003; 2–4 Week Turnkey Sprints</span>
+              <span>&#10003; 100% Private Cloud Ownership</span>
+              <span>&#10003; 24/7 Managed SLA Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Stack Audit Form -->
+  <section class="section-audit" id="audit">
+    <div class="container">
+      <div class="audit-card">
+        <h2>Book Your 48-Hour Stack &amp; Efficiency Audit</h2>
+        <p class="subtitle">Tell us where software is creating drag on your team. We will review your stack and return a custom 3-year transformation roadmap.</p>
+        
+        <form id="auditForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="auditName" class="form-control" placeholder="e.g. David Miller" required>
+          </div>
+          <div class="form-group">
+            <label>Work Email</label>
+            <input type="email" id="auditEmail" class="form-control" placeholder="david@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Company Name &amp; Staff Size</label>
+            <input type="text" id="auditCompany" class="form-control" placeholder="e.g. Vanguard Logistics (120 employees)" required>
+          </div>
+          <div class="form-group">
+            <label>What is the operational problem or issue you need help with right now?</label>
+            <textarea id="auditIssue" class="form-control" rows="4" placeholder="Briefly describe what is slowing your team down (e.g. 'Our warehouse team is tracking orders on whiteboards because Power BI licenses are capped', or 'Zapier bills are getting out of hand', or 'Our sales reps hate logging deals into our bloated CRM')..." required></textarea>
+          </div>
+          <button type="submit" id="auditSubmitBtn" class="btn-submit">Request Your 48-Hour Stack Audit &rarr;</button>
+          <div id="auditStatusMsg" style="display:none; margin-top:20px; padding:16px; border-radius:8px; font-size:14.5px; text-align:center; line-height:1.5;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Charlton Smith. Enterprise Open Source Transformation Partner &amp; Managed Retainers.</p>
+      <p style="margin-top:8px; color:rgba(148,163,184,0.6);">All systems deployed directly into client private cloud infrastructure. Zero vendor lock-in.</p>
+    </div>
+  </footer>
+
+  <!-- Asynchronous Form Handler -->
+  <script>
+    const form = document.getElementById('auditForm');
+    const submitBtn = document.getElementById('auditSubmitBtn');
+    const statusMsg = document.getElementById('auditStatusMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('auditName').value.trim();
+      const email = document.getElementById('auditEmail').value.trim();
+      const company = document.getElementById('auditCompany').value.trim();
+      const issue = document.getElementById('auditIssue').value.trim();
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending Your Audit Request...';
+      statusMsg.style.display = 'none';
+
+      // Detect endpoint: works when loaded directly via backend or standalone
+      const isCustomPort = window.location.port && window.location.port !== '80' && window.location.port !== '443';
+      const apiEndpoint = (window.location.protocol === 'file:' || (isCustomPort && window.location.port !== '3001'))
+        ? 'http://localhost:3001/api/audit-inquiry'
+        : '/api/audit-inquiry';
+
+      try {
+        const response = await fetch(apiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, company, issue })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          statusMsg.style.display = 'block';
+          statusMsg.style.background = 'rgba(16, 185, 129, 0.15)';
+          statusMsg.style.border = '1px solid #10B981';
+          statusMsg.style.color = '#34D399';
+          statusMsg.innerHTML = `<strong>Request Delivered!</strong> Thank you, ${name}. Your inquiry has been sent directly to Charlton Smith. A confirmation has been emailed to <u>${email}</u>. We will review your operations and contact you within 24 hours.`;
+          form.reset();
+          submitBtn.innerHTML = 'Audit Request Submitted &#10003;';
+        } else {
+          throw new Error(data.error || 'Server error');
+        }
+      } catch (err) {
+        statusMsg.style.display = 'block';
+        statusMsg.style.background = 'rgba(239, 68, 68, 0.15)';
+        statusMsg.style.border = '1px solid #EF4444';
+        statusMsg.style.color = '#F87171';
+        statusMsg.innerHTML = `<strong>Error sending request:</strong> Could not connect to the inquiry service (${err.message}). Alternatively, please email <a href="mailto:charltonsmithfde@gmail.com" style="color:#00A3E0; text-decoration:underline;">charltonsmithfde@gmail.com</a> directly.`;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Request Your 48-Hour Stack Audit &rarr;';
+      }
+    });
+  </script>
+
+</body>
+</html>

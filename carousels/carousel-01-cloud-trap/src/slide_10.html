@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide 10: The Next Move — Charlton Smith</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap');
+
+    :root {
+      --primary-navy: #002D62;
+      --deep-navy: #010D1E;
+      --royal-blue: #0075C9;
+      --accent-cyan: #00A3E0;
+      --card-bg: #071E3D;
+      --card-border: rgba(0, 163, 224, 0.28);
+      --text-white: #FFFFFF;
+      --text-slate: #CBD5E1;
+      --text-muted: #94A3B8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1080px; height: 1350px; overflow: hidden; background: var(--deep-navy);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1080px; height: 1350px; position: relative;
+      background: linear-gradient(145deg, #010A17 0%, #001C3D 45%, #002D62 80%, #00427A 100%);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 68px 80px 58px 80px; overflow: hidden;
+    }
+
+    .bg-grid {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 117, 201, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 117, 201, 0.07) 1px, transparent 1px);
+      background-size: 44px 44px; pointer-events: none;
+    }
+
+    .bg-glow-top {
+      position: absolute; top: -120px; right: -80px; width: 580px; height: 580px;
+      background: radial-gradient(circle, rgba(0, 163, 224, 0.18) 0%, rgba(0, 45, 98, 0) 70%);
+      filter: blur(50px); pointer-events: none;
+    }
+
+    .slide-header {
+      z-index: 2; display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(0, 163, 224, 0.22); padding-bottom: 22px;
+    }
+    .header-brand { display: flex; align-items: center; gap: 16px; }
+    .brand-avatar {
+      width: 54px; height: 54px; border-radius: 50%; border: 2.5px solid var(--accent-cyan);
+      object-fit: cover; box-shadow: 0 4px 16px rgba(0, 163, 224, 0.35);
+    }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: 1.2px; text-transform: uppercase; }
+    .brand-title { font-size: 12px; font-weight: 600; color: var(--accent-cyan); letter-spacing: 0.5px; margin-top: 3px; }
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 800;
+      color: var(--accent-cyan); background: rgba(0, 45, 98, 0.85);
+      border: 1px solid rgba(0, 163, 224, 0.45); padding: 7px 16px; border-radius: 20px;
+    }
+
+    .slide-body {
+      z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; margin: 20px 0;
+    }
+
+    .eyebrow-pill {
+      align-self: flex-start; display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(0, 117, 201, 0.22); border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan); padding: 8px 18px; border-radius: 30px;
+      font-size: 13px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase;
+    }
+    .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan); }
+
+    .headline { font-size: 50px; font-weight: 800; line-height: 1.15; color: #fff; letter-spacing: -1px; }
+    .headline .cyan { color: var(--accent-cyan); }
+
+    .roadmap-card {
+      background: rgba(7, 30, 61, 0.85); border: 1px solid var(--card-border);
+      border-radius: 16px; padding: 26px 32px; display: flex; flex-direction: column;
+      gap: 12px; backdrop-filter: blur(12px);
+    }
+
+    .roadmap-title {
+      font-size: 16px; font-weight: 800; color: var(--accent-cyan);
+      letter-spacing: 1.2px; text-transform: uppercase;
+    }
+
+    .roadmap-text {
+      font-size: 18px; color: var(--text-slate); line-height: 1.5;
+    }
+
+    .roadmap-text strong {
+      color: #FFFFFF; font-weight: 700;
+    }
+
+    /* Author Authority Card */
+    .author-authority-card {
+      background: rgba(4, 38, 77, 0.85); border: 1.5px solid var(--accent-cyan);
+      border-radius: 18px; padding: 30px; display: flex; flex-direction: column;
+      gap: 20px; box-shadow: 0 12px 35px rgba(0, 117, 201, 0.28);
+    }
+
+    .author-profile-row {
+      display: flex; gap: 24px; align-items: center;
+    }
+
+    .author-profile-img {
+      width: 104px; height: 104px; border-radius: 50%;
+      border: 3px solid var(--accent-cyan); object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0, 163, 224, 0.4);
+    }
+
+    .author-meta h3 {
+      font-size: 28px; font-weight: 800; color: #FFFFFF;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+
+    .author-meta .role {
+      font-size: 15px; font-weight: 700; color: var(--accent-cyan); margin-top: 3px;
+    }
+
+    .author-meta .bio {
+      font-size: 15px; color: var(--text-slate); line-height: 1.45; margin-top: 8px;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #0075C9 0%, #005A9E 100%);
+      border: 1px solid rgba(0, 163, 224, 0.8); color: #FFFFFF; text-align: center;
+      padding: 18px 24px; border-radius: 10px; font-weight: 800; font-size: 16px;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      box-shadow: 0 8px 25px rgba(0, 117, 201, 0.45);
+    }
+
+    .slide-footer {
+      z-index: 2; display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(0, 163, 224, 0.22); padding-top: 22px;
+    }
+    .footer-left { font-size: 15px; color: var(--text-muted); font-weight: 600; }
+    .footer-swipe {
+      font-size: 14px; font-weight: 800; color: var(--accent-cyan);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="bg-grid"></div>
+    <div class="bg-glow-top"></div>
+
+    <div class="slide-header">
+      <div class="header-brand">
+        <img class="brand-avatar" src="profile_picture.png" alt="Charlton Smith">
+        <div class="brand-text">
+          <span class="brand-name">Charlton Smith</span>
+          <span class="brand-title">Open Lakehouse Architect &amp; Advisory</span>
+        </div>
+      </div>
+      <div class="slide-counter">10 / 10</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow-pill">
+        <span class="eyebrow-dot"></span>
+        Chapter 9: The Next Move
+      </div>
+
+      <h2 class="headline">
+        Don't Rip &amp; Replace.<br>
+        <span class="cyan">Prove It With a 2-Week PoC.</span>
+      </h2>
+
+      <div class="roadmap-card">
+        <div class="roadmap-title">The 3-Step Low-Risk Roadmap</div>
+        <p class="roadmap-text">
+          <strong>1. Identify the Bottleneck:</strong> Select your slowest, most expensive, or most frustrating Power BI dashboard.<br>
+          <strong>2. Build a 2-Week PoC:</strong> Mirror that dataset using fast, open-source technology (DuckDB + Cube.js + clean web dashboards).<br>
+          <strong>3. Benchmark in Public:</strong> Compare query latencies, load times, and real costs side-by-side for your Board &amp; CFO.
+        </p>
+      </div>
+
+      <div class="author-authority-card">
+        <div class="author-profile-row">
+          <img class="author-profile-img" src="profile_picture.png" alt="Charlton Smith">
+          <div class="author-meta">
+            <h3>CHARLTON SMITH</h3>
+            <div class="role">Open Lakehouse Architect &amp; BI Specialist</div>
+            <div class="bio">
+              I help mid-market distributors, retail suppliers, and growing organizations cut 6-figure BI licensing taxes with fast, simple, open architectures.
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-button">
+          DM ME "AUDIT" ON LINKEDIN TO BENCHMARK YOUR DATA STACK &rarr;
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="footer-left">Charlton Smith &bull; Follow for weekly open data benchmarks</div>
+      <div class="footer-swipe">CONNECT &bull; SHARE &bull; REPOST</div>
+    </div>
+  </div>
+
+</body>
+</html>

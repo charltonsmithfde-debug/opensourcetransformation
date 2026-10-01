@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide 4: The Seat Tax — Charlton Smith</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap');
+
+    :root {
+      --primary-navy: #002D62;
+      --deep-navy: #010D1E;
+      --royal-blue: #0075C9;
+      --accent-cyan: #00A3E0;
+      --card-bg: #071E3D;
+      --card-border: rgba(0, 163, 224, 0.28);
+      --text-white: #FFFFFF;
+      --text-slate: #CBD5E1;
+      --text-muted: #94A3B8;
+      --danger-red: #F87171;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1080px; height: 1350px; overflow: hidden; background: var(--deep-navy);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1080px; height: 1350px; position: relative;
+      background: linear-gradient(145deg, #010A17 0%, #001C3D 45%, #002D62 80%, #00427A 100%);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 68px 80px 58px 80px; overflow: hidden;
+    }
+
+    .bg-grid {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 117, 201, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 117, 201, 0.07) 1px, transparent 1px);
+      background-size: 44px 44px; pointer-events: none;
+    }
+
+    .bg-glow-top {
+      position: absolute; top: -120px; right: -80px; width: 580px; height: 580px;
+      background: radial-gradient(circle, rgba(0, 163, 224, 0.18) 0%, rgba(0, 45, 98, 0) 70%);
+      filter: blur(50px); pointer-events: none;
+    }
+
+    .slide-header {
+      z-index: 2; display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(0, 163, 224, 0.22); padding-bottom: 22px;
+    }
+    .header-brand { display: flex; align-items: center; gap: 16px; }
+    .brand-avatar {
+      width: 54px; height: 54px; border-radius: 50%; border: 2.5px solid var(--accent-cyan);
+      object-fit: cover; box-shadow: 0 4px 16px rgba(0, 163, 224, 0.35);
+    }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: 1.2px; text-transform: uppercase; }
+    .brand-title { font-size: 12px; font-weight: 600; color: var(--accent-cyan); letter-spacing: 0.5px; margin-top: 3px; }
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 800;
+      color: var(--accent-cyan); background: rgba(0, 45, 98, 0.85);
+      border: 1px solid rgba(0, 163, 224, 0.45); padding: 7px 16px; border-radius: 20px;
+    }
+
+    .slide-body {
+      z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; margin: 24px 0;
+    }
+
+    .eyebrow-pill {
+      align-self: flex-start; display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(0, 117, 201, 0.22); border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan); padding: 8px 18px; border-radius: 30px;
+      font-size: 13px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase;
+    }
+    .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan); }
+
+    .headline { font-size: 50px; font-weight: 800; line-height: 1.15; color: #fff; letter-spacing: -1px; }
+    .headline .cyan { color: var(--accent-cyan); }
+
+    .story-card-large {
+      background: rgba(7, 30, 61, 0.85); border: 1px solid var(--card-border);
+      border-radius: 18px; padding: 34px 38px; display: flex; flex-direction: column;
+      gap: 20px; backdrop-filter: blur(12px);
+    }
+
+    .story-paragraph { font-size: 20px; line-height: 1.55; color: var(--text-slate); }
+    .story-paragraph strong { color: #FFFFFF; font-weight: 700; }
+
+    .tollbooth-list {
+      display: flex; flex-direction: column; gap: 12px; margin: 6px 0;
+    }
+
+    .tollbooth-item {
+      background: rgba(0, 45, 98, 0.7); border-left: 4px solid var(--accent-cyan);
+      padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: 17px;
+      color: #FFFFFF; line-height: 1.45;
+    }
+
+    .tollbooth-item strong { color: var(--accent-cyan); }
+
+    .callout-box {
+      background: rgba(45, 14, 22, 0.75); border-left: 5px solid #F87171;
+      padding: 18px 24px; border-radius: 0 12px 12px 0; font-size: 18px;
+      color: #FEE2E2; line-height: 1.45;
+    }
+
+    .slide-footer {
+      z-index: 2; display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid rgba(0, 163, 224, 0.22); padding-top: 22px;
+    }
+    .footer-left { font-size: 15px; color: var(--text-muted); font-weight: 600; }
+    .footer-swipe {
+      display: flex; align-items: center; gap: 10px; font-size: 14px;
+      font-weight: 800; color: var(--accent-cyan); letter-spacing: 2px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide">
+    <div class="bg-grid"></div>
+    <div class="bg-glow-top"></div>
+
+    <div class="slide-header">
+      <div class="header-brand">
+        <img class="brand-avatar" src="profile_picture.png" alt="Charlton Smith">
+        <div class="brand-text">
+          <span class="brand-name">Charlton Smith</span>
+          <span class="brand-title">Open Lakehouse Architect &amp; Advisory</span>
+        </div>
+      </div>
+      <div class="slide-counter">04 / 10</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow-pill">
+        <span class="eyebrow-dot"></span>
+        Chapter 3: The Seat Tax
+      </div>
+
+      <h2 class="headline">
+        "Nobody Ever Got Fired for<br>
+        <span class="cyan">Buying Microsoft."</span>
+      </h2>
+
+      <div class="story-card-large">
+        <p class="story-paragraph">
+          Next, you need to show the data to the business. You choose Power BI because it feels corporate and safe.
+        </p>
+
+        <div class="tollbooth-list">
+          <div class="tollbooth-item">
+            <strong>The Warehouse Tollbooth:</strong> Want supervisors to track inventory turn? That’s <strong>$14/month</strong> per person.
+          </div>
+          <div class="tollbooth-item">
+            <strong>The Frontline Tollbooth:</strong> Want 80 operational supervisors and sales reps to see daily metrics? Pay <strong>$16,800/year</strong> just for viewer privileges.
+          </div>
+          <div class="tollbooth-item">
+            <strong>The Enterprise Out:</strong> Want to eliminate per-seat fees? Microsoft Fabric capacity starts at <strong>~$60,000/year</strong>.
+          </div>
+        </div>
+
+        <div class="callout-box">
+          <strong>The Result:</strong> Management starts rationing licenses. Frontline teams are told they don't have access, and everyone goes right back to emailing stale Excel sheets.
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="footer-left">Charlton Smith &bull; For Founders, CEOs &amp; CFOs</div>
+      <div class="footer-swipe">
+        <span>Swipe to Chapter 4</span>
+        <span>&rarr;</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

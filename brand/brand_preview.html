@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charlton Smith — Brand Assets & Visual Preview</title>
+  <style>
+    :root {
+      --primary-navy: #002D62;
+      --royal-blue: #0075C9;
+      --accent-cyan: #00A3E0;
+      --bg-dark: #071529;
+      --card-bg: #0B2247;
+      --text-white: #FFFFFF;
+      --text-slate: #CBD5E1;
+      --border-color: rgba(0, 163, 224, 0.3);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+    h2 { font-size: 24px; margin-bottom: 12px; color: var(--accent-cyan); letter-spacing: 0.5px; }
+    .container { width: 100%; max-width: 1200px; }
+
+    /* LINKEDIN BANNER PREVIEW */
+    .banner-preview {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #001A38 0%, #002D62 60%, #004B8D 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 60px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .banner-glow {
+      position: absolute;
+      top: -100px;
+      right: 15%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 163, 224, 0.25) 0%, rgba(0, 45, 98, 0) 70%);
+      pointer-events: none;
+    }
+    .banner-content {
+      max-width: 680px;
+      z-index: 2;
+    }
+    .banner-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .banner-title {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-white);
+      margin-bottom: 12px;
+    }
+    .banner-title span {
+      color: var(--accent-cyan);
+    }
+    .banner-sub {
+      font-size: 14.5px;
+      color: var(--text-slate);
+      margin-bottom: 20px;
+    }
+    .banner-badges {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .badge {
+      background: rgba(0, 117, 201, 0.2);
+      border: 1px solid var(--accent-cyan);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-white);
+    }
+    .banner-cta {
+      background: var(--royal-blue);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .banner-branding {
+      z-index: 2;
+      text-align: right;
+    }
+    .banner-branding .name {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .banner-branding .title {
+      font-size: 14px;
+      color: var(--accent-cyan);
+      margin-top: 4px;
+    }
+
+    /* AUTHOR CARD PREVIEW */
+    .slide-author-card {
+      width: 580px;
+      background: linear-gradient(180deg, #0B2247 0%, #001E42 100%);
+      border: 1px solid var(--accent-cyan);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    .profile-row {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .profile-img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-cyan);
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 163, 224, 0.3);
+    }
+    .author-info h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .author-info p {
+      font-size: 14px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .quote-box {
+      background: rgba(0, 45, 98, 0.6);
+      border-left: 4px solid var(--royal-blue);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-slate);
+    }
+    .cta-button {
+      background: linear-gradient(90deg, var(--royal-blue) 0%, #005A9E 100%);
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>1. LinkedIn Profile Banner (1584 x 396 Ratio Preview)</h2>
+    <div class="banner-preview">
+      <div class="banner-glow"></div>
+      <div class="banner-content">
+        <div class="banner-tagline">ENTERPRISE OPEN SOURCE TRANSFORMATION</div>
+        <div class="banner-title">Win Back Time &amp; Efficiency. <span>Zero Software Drag.</span></div>
+        <div class="banner-sub">BI &bull; Automations &bull; CRM &bull; Invoicing &bull; Fleet &bull; E-Commerce &bull; Observability</div>
+        <div class="banner-badges">
+          <div class="badge">Tailored to Your Workflow</div>
+          <div class="banner-cta">Win Back Time: charltonearlsmith.co.za &rarr;</div>
+        </div>
+      </div>
+      <div class="banner-branding">
+        <div class="name">CHARLTON SMITH</div>
+        <div class="title">Open Source Transformation Partner</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="display:flex; flex-direction:column; align-items:center;">
+    <h2>2. Carousel Slide 10 Author &amp; Conversion Card</h2>
+    <div class="slide-author-card">
+      <div class="profile-row">
+        <img class="profile-img" src="../assets/profile_picture.png" alt="Charlton Smith">
+        <div class="author-info">
+          <h3>Charlton Smith</h3>
+          <p>Enterprise Open Source Transformation Partner</p>
+        </div>
+      </div>
+      <div class="quote-box">
+        "I help busy mid-market companies win back time and operational efficiency by replacing bloated, rigid enterprise software with fast, tailored open source systems—implemented in 2 to 4 weeks and managed 24/7."
+      </div>
+      <div class="cta-button">
+        BENCHMARK YOUR STACK &amp; OPERATIONS AT CHARLTONEARLSMITH.CO.ZA
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
