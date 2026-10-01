@@ -33,73 +33,58 @@ flowchart TD
     end
 
     subgraph LandingPageProfile["Tobi's Profile as a Sales Landing Page"]
-        L1["<b>Hero Billboard (Banner)</b>: Problem, Time & Efficiency Won Back, CTA to Website"]
-        L2["<b>Page Headline (H1)</b>: Who you help + Enterprise drag removed + URL"]
-        L3["<b>Sales Manifesto (About)</b>: Story hook + The Villain + The 3-Step Model"]
-        L4["<b>Lead Magnet (Featured)</b>: Direct link to Stack Benchmark on charltonearlsmith.co.za"]
-        L5["<b>High-Ticket Engine</b>: 2-4 Week Sprints ($10k-$25k) + Managed Retainers ($3k-$7k/mo)"]
+        L1["<b>Hero Billboard (Banner)</b>: We help great businesses run without operational friction"]
+        L2["<b>Page Headline</b>: Systems & Efficiency Partner @ Appleify Automation"]
+        L3["<b>Locked-In Manifesto (About)</b>: Customer value first + Diagnosis + Outcome"]
+        L4["<b>Lead Magnet (Featured)</b>: 48-Hour Operational Audit on charltonearlsmith.co.za"]
+        L5["<b>Consultative Engine</b>: Diagnose -> Streamline ($10k-$25k) -> Support ($3k-$7k/mo)"]
     end
 
     FailingProfile -.->|Tobi Teardown| LandingPageProfile
 ```
 
 ### Key Principles from Tobi's Client Reviews:
-1. **The Headline is your H1 Hook**: Prospects give you 3 seconds. If your headline says *"Data Architect & Consultant"*, you are a commodity. If it says *"Helping busy mid-market businesses win back time & operational efficiency with production-grade Open Source"*, you are a high-value strategic transformation partner.
-2. **Eliminate the "Consultant's Curse" (Over-complicating the tech)**: Clients do not care what database or workflow engine you use. They care that **they stop wasting 15 hours a week on manual spreadsheets**, **stop paying $14/user/month to view reports**, and **regain control of their systems**.
+1. **The Headline is your H1 Hook**: In the comment feed, people see your title and company (`Systems & Efficiency Partner @ Appleify Automation`). It establishes instant executive peer authority.
+2. **Never Lead with Software or Prepackaged Boxes**: Business owners don't want more software. They want **time back, simplicity, and happy, efficient operations**. We diagnose first, then build whatever background workflows eliminate their specific bottlenecks.
 3. **The $20k–$50k/Month High-Ticket Packaging Math**:
-   * Instead of small hourly gigs, package a **Turnkey Transformation Sprint** ($10,000 to $25,000 fixed price) followed by a **Managed Open Infrastructure Retainer** ($3,000 to $7,000/month).
+   * Instead of small hourly gigs, package a **Turnkey Implementation Sprint** ($10,000 to $25,000 fixed price) followed by an ongoing **Managed Operations Retainer** ($3,000 to $7,000/month).
    * Just 4 active retainer clients generate **$15k–$25k/month in recurring, predictable revenue**, completely eliminating the feast-and-famine cycle.
 
 ---
 
-## 3. The 8 Operational Transformation Domains
-
-| Operational Domain | The Enterprise SaaS Drag (Called Out) | The Open Source Business Transformation |
-| :--- | :--- | :--- |
-| **1. Business Intelligence & Reporting** | Power BI, Tableau, Snowflake | Instant executive and frontline dashboards directly on your private cloud with **zero per-seat limits**. Put real-time numbers in front of every decision-maker. |
-| **2. Workflow Automations & Integrations** | Zapier, Make, Workato | High-capacity automation pipelines connecting your systems with **unlimited execution steps and zero per-task penalties**. |
-| **3. CRM & Lead Management** | Salesforce, HubSpot Enterprise | Streamlined customer relationships and pipeline tracking tailored to your exact sales process with **100% data ownership and zero per-seat user fees**. |
-| **4. Invoicing & Revenue Management** | Stripe Billing enterprise tiers, Chargebee, QuickBooks seat locks | Clean recurring billing, automated dunning, and multi-currency invoicing with **zero platform percentage take-rates**. |
-| **5. Transportation, Fleet & Logistics** | Samsara, Geotab, proprietary TMS subscriptions | Real-time GPS tracking, dispatch routing, delivery manifests, and fleet telemetry with **zero monthly per-vehicle software fees**. |
-| **6. E-Commerce & Digital Commerce** | Shopify Plus ($2,500/mo + % cut), Adobe Commerce | High-speed B2B wholesale portals and digital storefronts with **complete customer database ownership and zero transaction cuts**. |
-| **7. Infrastructure Monitoring & Observability** | Datadog, New Relic, Splunk | Unified system visibility, log aggregation, and error tracing with **zero surprise volume spike invoices**. |
-| **8. Internal Portals & Operational Tools** | Retool Enterprise, custom proprietary software | Custom frontline inventory screens, dispatch tablets, and operational tools built around your exact workflow with **zero user license caps**. |
-
----
-
-## 4. The 3-Tier Commercial Delivery Flywheel
+## 3. The 3-Stage Consultative Delivery Model
 
 ```mermaid
 graph TD
-    A["<b>Top-of-Funnel Content Engine</b><br>LinkedIn snack-sized stories + YouTube Vanguard Supply Co. walkthroughs"] --> B["<b>Front-End: The Stack & Efficiency Audit</b><br>At charltonearlsmith.co.za: Review top 3 SaaS lines, project time & TCO savings"]
-    B --> C["<b>Core Transformation: 2 to 4-Week Sprint ($10k-$25k)</b><br>Turnkey deployment into client's private cloud, data migration, frontline onboarding"]
-    C --> D["<b>Recurring Engine: Managed Retainer ($3k-$7k/mo)</b><br>24/7 uptime monitoring, security patching, automated backups, SLA support"]
+    A["<b>1. Diagnose (The 48-Hour Operational Audit)</b><br>Identify where time and revenue leak; map custom efficiency roadmap"] --> B["<b>2. Streamline (The Turnkey Sprint, 2-4 Wks)</b><br>Design & embed tailored operational workflows with zero business downtime"]
+    B --> C["<b>3. Support (24/7 Managed Operations)</b><br>Oversee, maintain, and support background workflows so leadership never worries"]
 ```
 
 ---
 
-## 5. The 3 Core Channels (Integrated Architecture)
+## 4. The 3 Core Channels (Integrated Architecture)
 
 ### Channel 1: The charltonearlsmith.co.za Website Funnel
-* **Role**: The centralized conversion hub. Simple, authoritative, lightning-fast one-page executive funnel.
+* **Role**: The centralized conversion hub. Simple, authoritative, lightning-fast executive funnel.
 * **Key Components**:
-  * Hero hook: *"Win Back Time & Operational Efficiency. Zero Enterprise Software Drag."*
-  * The 3 SaaS friction cards (Seat rationing, growth penalties, 14-click bloat).
-  * The 8 Operational Transformation Domains.
-  * Embedded YouTube walkthrough (*"The Whiteboard in the Warehouse"*).
-  * Interactive 48-Hour Stack & Efficiency Audit booking form.
+  * Hero hook: *"We help great businesses run without the operational friction."*
+  * The 3 Process Friction Cards (Repetitive Admin Drag, Process & Department Handoffs, Operational Firefighting).
+  * The 3-Step Delivery Flywheel (Diagnose $\rightarrow$ Streamline $\rightarrow$ Support).
+  * Interactive 48-Hour Operational Audit booking form.
+  * Footer: `© 2026 Charlton Earl Smith • Delivered by Appleify Automation`.
 * **Code Deliverable**: [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/index.html)
 * **Funnel Specification**: [`website/charltonearlsmith_website_funnel_specification.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/charltonearlsmith_website_funnel_specification.md)
 
 ### Channel 2: The LinkedIn Thought Leadership Engine
 * **Role**: Daily weekday top-of-funnel attention and authority building.
-* **Format**: Snack-sized (8–12 lines), one thought per line, zero open-source names, direct call-outs of enterprise software friction, direct CTA to `charltonearlsmith.co.za`.
-* **Profile Setup**: Headline Option A + Story-driven About Manifesto in [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/brand_and_profile_overhaul.md).
+* **Format**: Snack-sized (8–12 lines), one thought per line, zero open-source names, direct focus on business processes, customer focus, and time back.
+* **Profile Setup**: Headline + Locked-In About Manifesto in [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/brand_and_profile_overhaul.md).
 * **Week 1 Calendar**: [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/posts/week_01_content_calendar.md).
 
 ### Channel 3: The YouTube Narrative Engine (Vanguard Supply Co.)
 * **Role**: Deep executive trust, proof of capability, and high-ticket client conversion.
-* **Format**: Real software walkthroughs in the life of a fictional $35M distributor (**Vanguard Supply Co.**). **Strictly NO CLI commands, Linux terminal scripts, or GitHub install tutorials.**
+* **Format**: Real business walkthroughs in the life of a fictional $35M distributor (**Vanguard Supply Co.**). **Strictly NO CLI commands, Linux terminal scripts, or GitHub install tutorials.**
+* **Story Arc**: Demonstrates diagnosing operational friction, eliminating dispatch whiteboards and manual quotation bottlenecks, and letting the team get home for dinner.
 * **Strategy & Universe Spec**: [`videos/youtube_channel_strategy_and_narrative_universe.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/youtube_channel_strategy_and_narrative_universe.md).
 * **Episode 1 Script**: [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md).
 

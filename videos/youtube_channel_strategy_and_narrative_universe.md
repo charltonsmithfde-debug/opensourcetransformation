@@ -1,9 +1,10 @@
-# Charlton Smith — YouTube Narrative Engine & Channel Strategy
-## High-Ticket B2B Acquisition: The Story of Open Source in a Fictional Business
+# Charlton Earl Smith — YouTube Narrative Engine & Channel Strategy
+## High-Ticket B2B Acquisition: Eliminating Operational Friction in a Fictional Business
 
 > **Channel Objective**: Attract, educate, and convert busy mid-market business owners, COOs, and managing directors (50–500 employees).  
-> **Key Metric**: Not vanity views or virality, but **qualified pipeline velocity, executive trust, and stack audit inquiries at [charltonearlsmith.co.za](https://charltonearlsmith.co.za)**.  
-> **Core Format Rule**: **Strictly NO CLI, terminal commands, bash scripts, or GitHub install tutorials.** The videos focus 100% on **real software UI walkthroughs, operational problem-solving, and workflow harmony** in the daily life of a fictional growing company.
+> **Key Metric**: Not vanity views or virality, but **qualified pipeline velocity, executive trust, and operational audit inquiries at [charltonearlsmith.co.za](https://charltonearlsmith.co.za)**.  
+> **Core Format Rule**: **Strictly NO CLI, terminal commands, bash scripts, or GitHub install tutorials.** The videos focus 100% on **real operational problem-solving, eliminating business process bottlenecks, and winning back time** in the daily life of a fictional growing company (**Vanguard Supply Co.**).
+> **Delivery Engine**: Appleify Automation — Diagnosing, streamlining, and managing background operations 24/7.
 
 ---
 
