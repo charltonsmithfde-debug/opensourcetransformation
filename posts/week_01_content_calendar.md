@@ -7,31 +7,34 @@
 
 ---
 
-## Post 1 (Monday): Workflow Automation & System Integrations
-*Pillar: The Enterprise Enemy (Zapier / Task Tollbooths)*  
-*Target: Founders, COOs, Heads of Operations*
+## Post 1 (Monday): The Manual Admin Bottleneck
+*Pillar: Time Back & Operational Freedom*  
+*Target: Business Owners, COOs, Heads of Operations*
 
 ```text
-A company with 85 employees is paying $3,200 a month to Zapier.
+A sales manager told me:
 
-Why?
-Because their sales pipeline triggers 45,000 webhook events every week.
+"My reps spent 14 hours this week manually copying customer quotes into our billing system."
 
-Zapier didn't build a better engine.
-They built a tollbooth on your business growth.
+I asked why they weren't automating it.
 
-Every time this company closes more deals, Zapier takes a bigger cut.
+"Because every time we connect our tools, our automation software charges us a fortune in task penalties."
 
-We migrated them to an enterprise open-source automation engine on their own private cloud.
+Think about that for a second.
 
-Same triggers.
-Same integrations.
+Your best sales reps are acting as human copy-paste bridges because software vendors charge you for every single data movement.
+
+Your team was hired to talk to customers and close deals.
+Not to be data-entry clerks between disconnected apps.
+
+We turn disconnected quoting and invoicing into quiet, automated background workflows.
+
 Zero per-task penalties.
+Zero manual busywork.
+14 hours given right back to the sales team every single week.
 
-Annual software savings: $37,920.
-
-Stop paying penalties for growing your business.
-Benchmark what you can replace at charltonearlsmith.co.za
+Get back to doing the work your customers actually pay you for:
+charltonearlsmith.co.za
 ```
 
 ---

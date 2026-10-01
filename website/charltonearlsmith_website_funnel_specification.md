@@ -23,30 +23,30 @@ flowchart TD
 ## 2. Copywriting & Section Breakdown
 
 ### Section 1: Above-the-Fold Hero
-* **Eyebrow Badge**: `ENTERPRISE OPEN SOURCE TRANSFORMATION`
+* **Eyebrow Badge**: `OPERATIONAL SYSTEMS & EFFICIENCY`
 * **Headline (H1)**:
-  # Win Back Time & Operational Efficiency.
-  ### <span style="color:#00A3E0;">Zero Enterprise Software Drag.</span>
+  # We help great businesses run
+  ### <span style="color:#00A3E0;">without the operational friction.</span>
 * **Sub-headline**:
-  *We help growing mid-market companies (50–500 staff) replace rigid, overpriced enterprise software with clean, fast Open Source systems—tailored to your exact workflow, deployed in 2 to 4 weeks, and managed 24/7.*
-* **Primary CTA**: `[ Book Your 48-Hour Stack & Efficiency Audit → ]` (Scrolls to Form)
+  *Your sales, reporting, and operations running seamlessly in the background — so your team gets back to doing what customers actually pay you for. We take the admin, quoting delays, and month-end scramble off your plate.*
+* **Primary CTA**: `[ Request Your 48-Hour Operational Audit → ]` (Scrolls to Form)
 * **Trust Badges**:
-  `✔ Zero Per-Seat User Limits` · `✔ 100% Private Cloud Data Ownership` · `✔ 24/7 Managed Retainer Support`
+  `✔ Zero Month-End Chaos` · `✔ Automated Quoting & Billing` · `✔ 24/7 Managed Operations`
 
 ---
 
-### Section 2: The Enterprise Software Drag (Calling Out The Enemy)
-* **Header**: **You Didn’t Build Your Business to Fit Inside a Software Vendor's Rigid Box.**
+### Section 2: The Operational Friction (The Real Human Cost)
+* **Header**: **You Didn’t Build Your Business to Fight Admin Drag & Spreadsheet Chaos**
 * **The Problem Grid (3 Pain Cards)**:
-  1. **The Seat License Rationing Tax**:
-     * *The Pain*: Your warehouse dispatchers and frontline staff are forced to use handwritten whiteboards or stale spreadsheets because corporate IT hit the license cap on Power BI or Salesforce.
-     * *The Fix*: Unlimited users and wall-mounted touchscreens with zero per-seat viewer taxes.
-  2. **The Growth Penalties (Task & Volume Meters)**:
-     * *The Pain*: Every time your sales pipeline closes more deals or your order volume surges, your workflow automation tools and monitoring platforms slap you with surprise monthly overage bills.
-     * *The Fix*: High-capacity automation and monitoring running on your own private cloud with zero per-task fees.
-  3. **The 14-Click Feature Bloat**:
-     * *The Pain*: Paying for complex enterprise software where 80% of the features are never touched, while the 20% your team actually needs requires 10 clicks and endless workarounds.
-     * *The Fix*: Clean, custom web portals built around your exact operational steps.
+  1. **The 20-Hour Month-End Recon**:
+     * *The Pain*: Finance and operations managers working late nights just to reconcile warehouse inventory with accounting books across mismatched spreadsheets.
+     * *The Fix*: Live reconciled operations where numbers match automatically 24/7.
+  2. **The Manual Quoting Bottleneck**:
+     * *The Pain*: Your top sales reps spending 45 minutes manually copying lines into proposal templates instead of talking to prospects and closing deals.
+     * *The Fix*: Automated quoting pipelines that generate and dispatch custom proposals in 30 seconds.
+  3. **The Disconnected Tool Drag**:
+     * *The Pain*: Paying thousands every month for multiple software subscriptions that don’t talk to each other, forcing your team into endless copy-pasting and email chains.
+     * *The Fix*: One smooth background system built around how your team actually works.
 
 ---
 

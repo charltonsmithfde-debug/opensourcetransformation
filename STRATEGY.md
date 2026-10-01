@@ -1,8 +1,8 @@
 # Charlton Smith — Master Business & Content Strategy (30-Day Execution Engine)
-## Enterprise Open Source Transformation & Managed Infrastructure Retainers
+## Core Mission: We Help Great Businesses Run Without the Operational Friction
 
 > **Canonical Lead Destination**: [charltonearlsmith.co.za](https://charltonearlsmith.co.za)  
-> **Target Audience**: Growing, busy mid-market companies (50–500 employees) with healthy operating budgets who are losing time, speed, and efficiency fighting bloated enterprise software.  
+> **Target Audience**: Growing, busy mid-market companies (50–500 employees) whose leaders want to win back their time, eliminate spreadsheet chaos, and automate busywork into quiet background engines.  
 > **Brand Methodology**: Built upon Tobi Oluwole's B2B organic growth frameworks (*"How I Got 400,000 Followers & Made $6M"* and live profile teardowns).
 
 ---
@@ -11,10 +11,10 @@
 
 | Strategic Pillar | Definition & Execution |
 | :--- | :--- |
-| **Core Value Proposition** | We replace rigid, predatory enterprise software (Power BI, Zapier, Salesforce, Datadog) with clean, high-speed Open Source systems tailored to how your business actually runs—implemented in 2 to 4 weeks and backed by a 24/7 managed infrastructure retainer. |
-| **Target Audience** | Busy mid-market business owners, CEOs, COOs, and Managing Directors who want to **win back time, control, and operational speed** (NOT cheapskates looking for free software). |
-| **Tool Policy** | **Strictly NO open-source tool names in public marketing** (No DuckDB, n8n, SigNoz, Odoo, Twenty, etc.). Call out the proprietary enterprise vendor, focus on the business outcome, and emphasize the managed retainer. |
-| **Lead Engine** | Every post, video description, banner, and profile section directs qualified prospects to **[charltonearlsmith.co.za](https://charltonearlsmith.co.za)** for stack and operational audits. |
+| **Core Value Proposition** | **We help great businesses run without the operational friction.** We take the manual admin, quoting bottlenecks, month-end recon marathons, and fragmented spreadsheets off your team's plate—turning them into quiet, automated background workflows managed 24/7 so leadership and staff do what customers actually pay them for. |
+| **Target Audience** | Busy business owners, COOs, MDs, and operations leaders (50–500 staff) looking for **time back, simplicity, and calm, predictable operations**. |
+| **Tool Policy** | **Strictly NO open-source tool names in public marketing** (No DuckDB, n8n, SigNoz, Odoo, Twenty, etc.). Open source is our silent, high-margin delivery vehicle. The customer-facing pitch is 100% about **time, sanity, simplicity, and operational velocity**. |
+| **Lead Engine** | Every post, video description, banner, and profile section directs qualified prospects to **[charltonearlsmith.co.za](https://charltonearlsmith.co.za)** for 48-hour operational audits. |
 
 ---
 
