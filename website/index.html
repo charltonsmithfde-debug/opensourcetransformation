@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charlton Smith — Enterprise Open Source Transformation Partner</title>
-  <meta name="description" content="Helping busy mid-market companies win back time and operational efficiency with production-ready Open Source software on their private cloud. Turnkey sprints and 24/7 managed retainers.">
+  <title>Appleify Automation — Systems & Efficiency Partner for Mid-Market Companies</title>
+  <meta name="description" content="We diagnose and eliminate the business processes keeping your team away from the work your customers pay you for. 48-hour operational audits, turnkey implementation, and managed support retainers for mid-market companies (50–500 staff).">
   <style>
     :root {
       --navy-dark: #010A17;
@@ -286,49 +286,11 @@
       padding-top: 14px;
     }
 
-    /* 8 Operational Domains Grid */
-    .section-domains {
-      padding: 90px 0;
-      border-top: 1px solid var(--border-card);
-    }
-    .domains-grid {
+    /* Steps Grid — supports 4-column layout */
+    .steps-row-4 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    .domain-card {
-      background: rgba(7, 26, 54, 0.6);
-      border: 1px solid var(--border-card);
-      border-radius: 10px;
-      padding: 24px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .domain-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--cyan-accent);
-    }
-    .domain-icon {
-      font-size: 24px;
-      margin-bottom: 12px;
-      display: inline-block;
-    }
-    .domain-card h4 {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .domain-card .replaces {
-      font-size: 12px;
-      color: #EF4444;
-      font-weight: 600;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .domain-card p {
-      font-size: 13px;
-      color: var(--text-slate);
-      line-height: 1.45;
+      gap: 24px;
     }
 
     /* 3-Step Process */
@@ -527,7 +489,7 @@
     /* Responsive */
     @media (max-width: 900px) {
       .hero h1 { font-size: 36px; }
-      .pain-cards, .domains-grid, .steps-row { grid-template-columns: 1fr; }
+      .pain-cards, .steps-row, .steps-row-4 { grid-template-columns: 1fr; }
       .checkbox-grid { grid-template-columns: 1fr; }
       .audit-card { padding: 28px 20px; }
       .nav-links { display: none; }
@@ -556,10 +518,9 @@
         Charlton <span>Smith</span>
       </a>
       <nav class="nav-links">
-        <a href="#domains">Transformation Domains</a>
-        <a href="#process">How It Works</a>
+        <a href="#process">How We Partner</a>
         <a href="#about">About Charlton</a>
-        <a href="#audit" class="btn-nav">Book Stack Audit</a>
+        <a href="#audit" class="btn-nav">Book Your Audit</a>
       </nav>
     </div>
   </header>
@@ -625,65 +586,7 @@
     </div>
   </section>
 
-  <!-- 8 Operational Domains -->
-  <section class="section-domains" id="domains">
-    <div class="container">
-      <div class="section-title">
-        <h2>The 8 Operational Transformation Domains</h2>
-        <p>Production-ready Open Source infrastructure deployed inside your own private cloud.</p>
-      </div>
-      <div class="domains-grid">
-        <div class="domain-card">
-          <div class="domain-icon">&#128202;</div>
-          <h4>BI &amp; Reporting</h4>
-          <div class="replaces">Replaces Power BI / Snowflake</div>
-          <p>Sub-second dashboards directly on your cloud storage with zero per-seat viewer taxes.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#9881;</div>
-          <h4>Workflow Automation</h4>
-          <div class="replaces">Replaces Zapier / Workato</div>
-          <p>Enterprise pipelines with unlimited execution steps and zero per-task penalties.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#128101;</div>
-          <h4>CRM &amp; Lead Ops</h4>
-          <div class="replaces">Replaces Salesforce / HubSpot</div>
-          <p>Streamlined sales pipelines with 100% data ownership and zero per-seat sales taxes.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#128179;</div>
-          <h4>Invoicing &amp; Revenue</h4>
-          <div class="replaces">Replaces Chargebee / Billing Add-ons</div>
-          <p>Automated recurring billing, invoicing, and dunning with zero platform percentage cuts.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#128666;</div>
-          <h4>Fleet &amp; Logistics</h4>
-          <div class="replaces">Replaces Samsara / Geotab</div>
-          <p>Real-time GPS tracking, dispatch routing, and telemetry with zero per-vehicle fees.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#128722;</div>
-          <h4>E-Commerce &amp; B2B</h4>
-          <div class="replaces">Replaces Shopify Plus / Magento</div>
-          <p>High-speed B2B wholesale portals and ordering apps with zero transaction cuts.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#128269;</div>
-          <h4>Observability &amp; Logs</h4>
-          <div class="replaces">Replaces Datadog / New Relic</div>
-          <p>Unified logs, metrics, and error tracing with zero unpredictable volume spike invoices.</p>
-        </div>
-        <div class="domain-card">
-          <div class="domain-icon">&#128187;</div>
-          <h4>Internal Portals</h4>
-          <div class="replaces">Replaces Retool Enterprise</div>
-          <p>Custom frontline inventory screens and dispatch tablets with zero user caps.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Video Walkthrough Section (Temporarily commented out until YouTube episode launch)
   <section class="section-video" id="case-study">
@@ -703,28 +606,37 @@
   </section>
   -->
 
-  <!-- 3-Step Consultative Delivery Model -->
+  <!-- 4-Stage Consultative Delivery Model -->
   <section class="section-process" id="process">
     <div class="container">
       <div class="section-title">
         <h2>How We Partner With You</h2>
-        <p>A diagnostic and turnkey operational model designed for busy business leaders.</p>
+        <p>No prepackaged solutions. No assumptions. A consultative model built around your unique operational DNA.</p>
       </div>
-      <div class="steps-row">
+      <div class="steps-row-4">
         <div class="step-box">
           <div class="step-num">01</div>
-          <h3>Diagnose: 48-Hour Audit</h3>
-          <p>We examine your daily workflows alongside your leadership, identify where hours are being leaked to manual busywork, and map out your custom efficiency roadmap.</p>
+          <h3>Diagnose</h3>
+          <p style="font-size:12px; color:var(--cyan-accent); font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">48-Hour Interactive Audit</p>
+          <p>We sit down with your team to understand the frustrations, walk through the day-to-day, and discuss your needs. We then diagnose and assess your operations and return with a <strong style="color:#fff;">turnkey sprint plan</strong> — complete with real, measurable KPIs to track impact.</p>
         </div>
         <div class="step-box">
           <div class="step-num">02</div>
-          <h3>Streamline: Turnkey Sprint</h3>
-          <p>We build and implement tailored operational background workflows designed around your exact team and customers—with zero disruption to daily business.</p>
+          <h3>Streamline</h3>
+          <p style="font-size:12px; color:var(--cyan-accent); font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">Implement &amp; Drive Adoption</p>
+          <p>We don't just build and disappear. We implement the streamlined workflows from your sprint plan, work alongside your team to drive real adoption, and ensure the new processes stick — not just on paper, but in practice.</p>
         </div>
         <div class="step-box">
           <div class="step-num">03</div>
-          <h3>Support: Managed Operations</h3>
-          <p>We oversee, maintain, and support your operational workflows 24/7 so leadership never has to worry about process breakdowns or administrative bottlenecks again.</p>
+          <h3>Measure</h3>
+          <p style="font-size:12px; color:var(--cyan-accent); font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">Track Outcomes Together</p>
+          <p>We measure results against the KPIs defined in your sprint plan. Hours saved, revenue recovered, bottlenecks eliminated — real numbers, not vague promises. If the outcomes deliver, we move to ongoing partnership.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">04</div>
+          <h3>Support</h3>
+          <p style="font-size:12px; color:var(--cyan-accent); font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">Monthly Managed Retainer</p>
+          <p>Once outcomes are proven, we offer monthly support retainers to maintain your new systems, keep adoption high, and continuously refine operations as your business evolves. You never worry about process drift again.</p>
         </div>
       </div>
     </div>
@@ -780,10 +692,10 @@
             <input type="text" id="auditCompany" class="form-control" placeholder="e.g. Vanguard Logistics (120 employees)" required>
           </div>
           <div class="form-group">
-            <label>What is the operational problem or issue you need help with right now?</label>
-            <textarea id="auditIssue" class="form-control" rows="4" placeholder="Briefly describe what is slowing your team down (e.g. 'Our warehouse team is tracking orders on whiteboards because Power BI licenses are capped', or 'Zapier bills are getting out of hand', or 'Our sales reps hate logging deals into our bloated CRM')..." required></textarea>
+            <label>What's slowing your team down right now?</label>
+            <textarea id="auditIssue" class="form-control" rows="4" placeholder="Tell us what's frustrating you (e.g. 'My finance team spends 3 days every month reconciling spreadsheets', or 'We lose deals because quoting takes too long', or 'My best people spend more time on admin than serving clients')..." required></textarea>
           </div>
-          <button type="submit" id="auditSubmitBtn" class="btn-submit">Request Your 48-Hour Stack Audit &rarr;</button>
+          <button type="submit" id="auditSubmitBtn" class="btn-submit">Request Your 48-Hour Operational Audit &rarr;</button>
           <div id="auditStatusMsg" style="display:none; margin-top:20px; padding:16px; border-radius:8px; font-size:14.5px; text-align:center; line-height:1.5;"></div>
         </form>
       </div>
@@ -849,7 +761,7 @@
         statusMsg.style.color = '#F87171';
         statusMsg.innerHTML = `<strong>Error sending request:</strong> Could not connect to the inquiry service (${err.message}). Alternatively, please email <a href="mailto:charltonsmithfde@gmail.com" style="color:#00A3E0; text-decoration:underline;">charltonsmithfde@gmail.com</a> directly.`;
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Request Your 48-Hour Stack Audit &rarr;';
+        submitBtn.innerHTML = 'Request Your 48-Hour Operational Audit &rarr;';
       }
     });
   </script>
