@@ -88,20 +88,20 @@ graph TD
   * The 8 Operational Transformation Domains.
   * Embedded YouTube walkthrough (*"The Whiteboard in the Warehouse"*).
   * Interactive 48-Hour Stack & Efficiency Audit booking form.
-* **Code Deliverable**: [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/website/index.html)
-* **Funnel Specification**: [`website/charltonearlsmith_website_funnel_specification.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/website/charltonearlsmith_website_funnel_specification.md)
+* **Code Deliverable**: [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/index.html)
+* **Funnel Specification**: [`website/charltonearlsmith_website_funnel_specification.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/charltonearlsmith_website_funnel_specification.md)
 
 ### Channel 2: The LinkedIn Thought Leadership Engine
 * **Role**: Daily weekday top-of-funnel attention and authority building.
 * **Format**: Snack-sized (8–12 lines), one thought per line, zero open-source names, direct call-outs of enterprise software friction, direct CTA to `charltonearlsmith.co.za`.
-* **Profile Setup**: Headline Option A + Story-driven About Manifesto in [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/brand/brand_and_profile_overhaul.md).
-* **Week 1 Calendar**: [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/posts/week_01_content_calendar.md).
+* **Profile Setup**: Headline Option A + Story-driven About Manifesto in [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/brand_and_profile_overhaul.md).
+* **Week 1 Calendar**: [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/posts/week_01_content_calendar.md).
 
 ### Channel 3: The YouTube Narrative Engine (Vanguard Supply Co.)
 * **Role**: Deep executive trust, proof of capability, and high-ticket client conversion.
 * **Format**: Real software walkthroughs in the life of a fictional $35M distributor (**Vanguard Supply Co.**). **Strictly NO CLI commands, Linux terminal scripts, or GitHub install tutorials.**
-* **Strategy & Universe Spec**: [`videos/youtube_channel_strategy_and_narrative_universe.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/videos/youtube_channel_strategy_and_narrative_universe.md).
-* **Episode 1 Script**: [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md).
+* **Strategy & Universe Spec**: [`videos/youtube_channel_strategy_and_narrative_universe.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/youtube_channel_strategy_and_narrative_universe.md).
+* **Episode 1 Script**: [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md).
 
 ---
 
@@ -121,12 +121,12 @@ graph TD
 ### Phase 1: Days 1 to 7 — Foundations Live & Launch
 
 #### Day 1 (Website Funnel Deployment):
-* Deploy the updated executive landing page to **[charltonearlsmith.co.za](https://charltonearlsmith.co.za)** using [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/website/index.html).
+* Deploy the updated executive landing page to **[charltonearlsmith.co.za](https://charltonearlsmith.co.za)** using [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/index.html).
 * Test the interactive audit request form and lead notification routing.
 
 #### Day 2 (LinkedIn Profile as a Landing Page):
-* Update LinkedIn Banner using [`brand/banner/linkedin_banner.html`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/brand/banner/linkedin_banner.html).
-* Paste **Headline Option A** from [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/brand/brand_and_profile_overhaul.md):
+* Update LinkedIn Banner using [`brand/banner/linkedin_banner.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/banner/linkedin_banner.html).
+* Paste **Headline Option A** from [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/brand_and_profile_overhaul.md):
   > *Helping busy mid-market businesses win back time & operational efficiency with production-grade Open Source | No jargon. Implemented, tailored & managed for you | charltonearlsmith.co.za*
 * Paste the story-driven **About Manifesto** and set Featured links directly to `charltonearlsmith.co.za`.
 
@@ -135,12 +135,12 @@ graph TD
 * Prepare screen recording environment for Episode 1 (*"The Whiteboard in the Warehouse"*).
 
 #### Day 4 (Recording Episode 1):
-* Record screen walkthrough of the modern analytics portal and floor supervisor tablet following [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md).
+* Record screen walkthrough of the modern analytics portal and floor supervisor tablet following [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md).
 * Record on-camera hook and outro.
 
 #### Day 5 (Launch Episode 1 & Post 1):
 * Publish Episode 1 on YouTube with full timestamps and audit link to `charltonearlsmith.co.za`.
-* Publish **Post 1** from [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/posts/week_01_content_calendar.md) on LinkedIn at 08:00 AM.
+* Publish **Post 1** from [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/posts/week_01_content_calendar.md) on LinkedIn at 08:00 AM.
 
 #### Days 6 & 7 (Targeted Executive Outreach):
 * Connect with 30 mid-market CEOs, COOs, and Managing Directors (50–500 staff in distribution, supply chain, and subscription business).
@@ -151,7 +151,7 @@ graph TD
 ### Phase 2: Days 8 to 14 — Daily Content Rhythm & First Audits
 
 #### Days 8 to 12 (Daily LinkedIn Content):
-* Publish Posts 2 through 6 from [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/posts/week_01_content_calendar.md) at 08:00 AM sharp:
+* Publish Posts 2 through 6 from [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/posts/week_01_content_calendar.md) at 08:00 AM sharp:
   * Tuesday: Frontline Whiteboard Story (Power BI seat tax).
   * Wednesday: The Sales Seat Tax (Salesforce bloat).
   * Thursday: Fleet Telematics (Samsara per-vehicle fee).
@@ -214,7 +214,7 @@ graph TD
 ## 7. Directory Map of All Deliverables in Your Workspace
 
 ```
-linkedln/
+opensourcetransformation/
 ├── STRATEGY.md                                           <-- MASTER 30-DAY STRATEGY BLUEPRINT
 ├── README.md                                             <-- Quick navigation index
 │
@@ -243,3 +243,4 @@ linkedln/
 └── carousels/                                            <-- 4:5 visual document decks
     └── carousel-01-cloud-trap/                           <-- Modern BI tax / Cloud trap deck
 ```
+

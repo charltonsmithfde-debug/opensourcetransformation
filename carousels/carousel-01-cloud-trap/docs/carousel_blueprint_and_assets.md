@@ -2,10 +2,10 @@
 
 ## Deliverable Assets Summary
 
-* **Upload-Ready PDF**: [`Charlton_Smith_Modern_BI_Tax_Carousel.pdf`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/Charlton_Smith_Modern_BI_Tax_Carousel.pdf) (Drag & drop directly into LinkedIn as a Document post).
-* **Interactive Source Deck**: [`carousel_slides.html`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/carousel_slides.html) (1080 × 1350 px per slide).
-* **Slide 1 Cover Image**: [`slide_1.png`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/slide_1.png).
-* **Slide 10 Conversion Card**: [`slide_10.png`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/slide_10.png).
+* **Upload-Ready PDF**: [`Charlton_Smith_Modern_BI_Tax_Carousel.pdf`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/Charlton_Smith_Modern_BI_Tax_Carousel.pdf) (Drag & drop directly into LinkedIn as a Document post).
+* **Interactive Source Deck**: [`carousel_slides.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/carousel_slides.html) (1080 × 1350 px per slide).
+* **Slide 1 Cover Image**: [`slide_1.png`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/slide_1.png).
+* **Slide 10 Conversion Card**: [`slide_10.png`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/slide_10.png).
 
 ---
 
@@ -75,3 +75,4 @@ Are you currently running Power BI or Snowflake? What percentage of your data bu
 
 #DataArchitecture #DuckDB #PowerBI #Snowflake #CFO #SupplyChain #BusinessIntelligence #OpenSource
 ```
+

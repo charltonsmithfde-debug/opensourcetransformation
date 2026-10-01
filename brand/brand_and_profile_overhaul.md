@@ -1,7 +1,7 @@
 # Charlton Smith — Brand Identity & LinkedIn Profile Overhaul
 ## Positioning: Enterprise Open Source Transformation Partner & Managed Retainers
 
-![Charlton Smith — Enterprise Open Source Transformation Partner](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/assets/profile_picture.png)
+![Charlton Smith — Enterprise Open Source Transformation Partner](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/assets/profile_picture.png)
 
 ---
 
@@ -169,3 +169,4 @@ Or send me a direct message here on LinkedIn.
 3. **Asset 3: Operational Breakdown**  
    * **Title**: `How an 80-Person Company Won Back 20 Hours/Week in Operational Automations`  
    * **Description**: *From disconnected SaaS tools to a private cloud automation engine with zero per-task penalties.*
+

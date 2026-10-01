@@ -43,29 +43,29 @@ opensourcetransformation/
 ## 🚀 Quick Links to Current Deliverables
 
 ### 1. Master Strategy & 30-Day Execution Engine
-* **Master 30-Day Strategy**: [`STRATEGY.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/STRATEGY.md)
-* **Tobi Oluwole Teardown Reference**: [`docs/revised_linkedin_strategy_tobi_oluwole.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/docs/revised_linkedin_strategy_tobi_oluwole.md)
+* **Master 30-Day Strategy**: [`STRATEGY.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/STRATEGY.md)
+* **Tobi Oluwole Teardown Reference**: [`docs/revised_linkedin_strategy_tobi_oluwole.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/docs/revised_linkedin_strategy_tobi_oluwole.md)
 
 ### 2. Website Funnel (charltonearlsmith.co.za)
-* **Landing Page Source Code**: [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/website/index.html)
-* **Funnel & Copy Specification**: [`website/charltonearlsmith_website_funnel_specification.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/website/charltonearlsmith_website_funnel_specification.md)
+* **Landing Page Source Code**: [`website/index.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/index.html)
+* **Funnel & Copy Specification**: [`website/charltonearlsmith_website_funnel_specification.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/website/charltonearlsmith_website_funnel_specification.md)
 
 ### 3. Profile Setup & Brand Assets
-* **Upload-Ready Banner PNG**: [`brand/banner/charlton_smith_linkedin_banner.png`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/brand/banner/charlton_smith_linkedin_banner.png)
-* **Profile Copy (Headline & About Section)**: [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/brand/brand_and_profile_overhaul.md)
-* **Interactive Visual Preview**: [`brand/brand_preview.html`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/brand/brand_preview.html)
+* **Upload-Ready Banner PNG**: [`brand/banner/charlton_smith_linkedin_banner.png`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/banner/charlton_smith_linkedin_banner.png)
+* **Profile Copy (Headline & About Section)**: [`brand/brand_and_profile_overhaul.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/brand_and_profile_overhaul.md)
+* **Interactive Visual Preview**: [`brand/brand_preview.html`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/brand/brand_preview.html)
 
 ### 4. Tobi Oluwole Content Engine & Posts
-* **Week 1 Calendar (7 Snack-Sized Story Posts)**: [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/posts/week_01_content_calendar.md)
+* **Week 1 Calendar (7 Snack-Sized Story Posts)**: [`posts/week_01_content_calendar.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/posts/week_01_content_calendar.md)
 
 ### 5. YouTube Narrative Engine (Vanguard Supply Co.)
-* **Channel Strategy & Fictional Business Universe**: [`videos/youtube_channel_strategy_and_narrative_universe.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/videos/youtube_channel_strategy_and_narrative_universe.md)
-* **Episode 1 Script & Walkthrough**: [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md)
+* **Channel Strategy & Fictional Business Universe**: [`videos/youtube_channel_strategy_and_narrative_universe.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/youtube_channel_strategy_and_narrative_universe.md)
+* **Episode 1 Script & Walkthrough**: [`videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/videos/season_01/episode_01_the_whiteboard_in_the_warehouse.md)
 
 ### 6. Carousel 1 (The $100,000 Cloud Trap)
-* **Upload-Ready PDF**: [`carousels/carousel-01-cloud-trap/exports/Charlton_Smith_Modern_BI_Tax_Carousel.pdf`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/carousels/carousel-01-cloud-trap/exports/Charlton_Smith_Modern_BI_Tax_Carousel.pdf)
-* **Slide 1 PNG Cover**: [`carousels/carousel-01-cloud-trap/exports/slide_1.png`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/carousels/carousel-01-cloud-trap/exports/slide_1.png)
-* **Slide 10 PNG Author Card**: [`carousels/carousel-01-cloud-trap/exports/slide_10.png`](file:///c:/Users/G988557/Documents/Code/antigravity/linkedln/carousels/carousel-01-cloud-trap/exports/slide_10.png)
+* **Upload-Ready PDF**: [`carousels/carousel-01-cloud-trap/exports/Charlton_Smith_Modern_BI_Tax_Carousel.pdf`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/carousels/carousel-01-cloud-trap/exports/Charlton_Smith_Modern_BI_Tax_Carousel.pdf)
+* **Slide 1 PNG Cover**: [`carousels/carousel-01-cloud-trap/exports/slide_1.png`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/carousels/carousel-01-cloud-trap/exports/slide_1.png)
+* **Slide 10 PNG Author Card**: [`carousels/carousel-01-cloud-trap/exports/slide_10.png`](file:///c:/Users/G988557/Documents/Code/antigravity/opensourcetransformation/carousels/carousel-01-cloud-trap/exports/slide_10.png)
 
 
 
@@ -78,3 +78,4 @@ opensourcetransformation/
 * **Vibrant Cyan**: `#00A3E0`
 * **Dark Base**: `#010A17`
 * **Target Audience**: Mid-market operations, suppliers, distributors, and subscription businesses (50–500 employees).
+
