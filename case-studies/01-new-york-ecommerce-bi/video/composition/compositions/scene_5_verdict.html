@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Scene 5: The Final Verdict</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #010A17; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+      #root { width: 100%; height: 100%; position: relative; background: #010A17; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 80px 120px; }
+      
+      .ambient-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; pointer-events: none; }
+      .glow-tr { top: -300px; right: -300px; background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(1, 10, 23, 0) 70%); }
+      .glow-bl { bottom: -300px; left: -300px; background: radial-gradient(circle, rgba(0, 117, 201, 0.15) 0%, rgba(1, 10, 23, 0) 70%); }
+
+      .watermark { position: absolute; top: 48px; left: 64px; display: flex; align-items: center; gap: 16px; z-index: 100; }
+      .watermark img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(0, 117, 201, 0.5); }
+      .watermark-name { font-size: 18px; font-weight: 700; color: #FFFFFF; }
+      .watermark-sub { font-size: 13px; font-weight: 500; color: #00A3E0; letter-spacing: 0.05em; text-transform: uppercase; }
+
+      .content { width: 100%; max-width: 1360px; display: flex; flex-direction: column; align-items: center; text-align: center; z-index: 10; }
+      .badge-emerald { font-size: 18px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #10B981; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 8px 24px; border-radius: 999px; margin-bottom: 20px; }
+      h2 { font-size: 72px; font-weight: 900; letter-spacing: -0.03em; }
+
+      .verdict-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; width: 100%; margin-top: 48px; text-align: left; }
+      .verdict-box { border-radius: 24px; padding: 44px; display: flex; flex-direction: column; gap: 20px; }
+      .verdict-box.legacy { background: rgba(239, 68, 68, 0.05); border: 2px solid rgba(239, 68, 68, 0.35); }
+      .verdict-box.lakehouse { background: rgba(16, 185, 129, 0.07); border: 2px solid rgba(16, 185, 129, 0.5); }
+      .box-tag { font-size: 18px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+      .box-tag.red { color: #EF4444; }
+      .box-tag.green { color: #10B981; }
+      .box-price { font-size: 56px; font-weight: 900; letter-spacing: -0.02em; }
+      .box-price.red { color: #EF4444; }
+      .box-price.green { color: #10B981; }
+      .box-desc { font-size: 22px; color: #CBD5E1; line-height: 1.45; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="scene_5_verdict" data-start="0" data-duration="12" data-width="1920" data-height="1080">
+      <div class="ambient-glow glow-tr" data-layout-allow-overflow></div>
+      <div class="ambient-glow glow-bl" data-layout-allow-overflow></div>
+
+      <div class="watermark">
+        <img id="watermark-avatar-5" class="clip" data-start="0" data-duration="12" src="assets/profile_picture.png" alt="Charlton Smith">
+        <div>
+          <div class="watermark-name">Charlton Smith</div>
+          <div class="watermark-sub">Appleify Automation</div>
+        </div>
+      </div>
+
+      <div class="content" id="verdict-container">
+        <div class="badge-emerald">The Bottom Line</div>
+        <h2>Protect Your Profit.</h2>
+        <div class="verdict-comparison">
+          <div class="verdict-box legacy" id="vb1">
+            <span class="box-tag red">Enterprise Proposal</span>
+            <div class="box-price red">$370,000+</div>
+            <p class="box-desc">
+              Wipes out 30% to 50% of annual net profit. Locks business data in proprietary silos.
+            </p>
+          </div>
+          <div class="verdict-box lakehouse" id="vb2">
+            <span class="box-tag green">Open Lakehouse</span>
+            <div class="box-price green">$0 Licenses</div>
+            <p class="box-desc">
+              Sub-second query speed. Managed by existing 2-person team. Cloud hosting &lt; $100/mo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(".content > div:first-child, .content > h2", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.15 }, 0.2);
+      tl.fromTo("#vb1", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.5);
+      tl.fromTo("#vb2", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.7);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["scene_5_verdict"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>The $210,000 BI Trap - Main Video Timeline</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #010A17; }
+      #root { width: 100%; height: 100%; position: relative; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="70"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="clip-scene-1" class="clip" data-composition-id="scene_1_hook" data-composition-src="compositions/scene_1_hook.html" data-start="0" data-duration="14" data-track-index="0"></div>
+      <div id="clip-scene-2" class="clip" data-composition-id="scene_2_quote" data-composition-src="compositions/scene_2_quote.html" data-start="14" data-duration="14" data-track-index="0"></div>
+      <div id="clip-scene-3" class="clip" data-composition-id="scene_3_blueprint" data-composition-src="compositions/scene_3_blueprint.html" data-start="28" data-duration="16" data-track-index="0"></div>
+      <div id="clip-scene-4" class="clip" data-composition-id="scene_4_dashboard" data-composition-src="compositions/scene_4_dashboard.html" data-start="44" data-duration="14" data-track-index="0"></div>
+      <div id="clip-scene-5" class="clip" data-composition-id="scene_5_verdict" data-composition-src="compositions/scene_5_verdict.html" data-start="58" data-duration="12" data-track-index="0"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

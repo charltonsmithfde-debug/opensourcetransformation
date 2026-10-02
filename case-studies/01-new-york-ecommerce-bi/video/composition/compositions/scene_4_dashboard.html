@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Scene 4: Live Dashboard Proof</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #010A17; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+      #root { width: 100%; height: 100%; position: relative; background: #010A17; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 100px; }
+      
+      .ambient-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; pointer-events: none; }
+      .glow-tr { top: -300px; right: -300px; background: radial-gradient(circle, rgba(0, 117, 201, 0.22) 0%, rgba(1, 10, 23, 0) 70%); }
+      .glow-bl { bottom: -300px; left: -300px; background: radial-gradient(circle, rgba(0, 163, 224, 0.14) 0%, rgba(1, 10, 23, 0) 70%); }
+
+      .watermark { position: absolute; top: 48px; left: 64px; display: flex; align-items: center; gap: 16px; z-index: 100; }
+      .watermark img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(0, 117, 201, 0.5); }
+      .watermark-name { font-size: 18px; font-weight: 700; color: #FFFFFF; }
+      .watermark-sub { font-size: 13px; font-weight: 500; color: #00A3E0; letter-spacing: 0.05em; text-transform: uppercase; }
+
+      .layout { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 1480px; z-index: 10; }
+      .badge-cyan { font-size: 16px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #00A3E0; background: rgba(0, 163, 224, 0.12); border: 1px solid rgba(0, 163, 224, 0.3); padding: 8px 22px; border-radius: 999px; margin-bottom: 12px; }
+      h2 { font-size: 48px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 20px; }
+
+      .frame { width: 100%; border-radius: 16px; overflow: hidden; border: 2px solid rgba(0, 163, 224, 0.4); box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9); position: relative; background: #000; }
+      .frame img { width: 100%; display: block; }
+
+      .callouts { display: flex; gap: 24px; margin-top: 24px; justify-content: center; width: 100%; }
+      .callout-pill { background: rgba(0, 117, 201, 0.15); border: 1px solid rgba(0, 163, 224, 0.4); border-radius: 999px; padding: 10px 24px; font-size: 18px; font-weight: 700; color: #FFFFFF; display: flex; align-items: center; gap: 10px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="scene_4_dashboard" data-start="0" data-duration="14" data-width="1920" data-height="1080">
+      <div class="ambient-glow glow-tr" data-layout-allow-overflow></div>
+      <div class="ambient-glow glow-bl" data-layout-allow-overflow></div>
+
+      <div class="watermark">
+        <img id="watermark-avatar-4" class="clip" data-start="0" data-duration="14" src="assets/profile_picture.png" alt="Charlton Smith">
+        <div>
+          <div class="watermark-name">Charlton Smith</div>
+          <div class="watermark-sub">Appleify Automation</div>
+        </div>
+      </div>
+
+      <div class="layout" id="dashboard-container">
+        <div class="badge-cyan">Proof of Work</div>
+        <h2>The Executive Command Center</h2>
+        <div class="frame" id="dash-frame">
+          <img id="dashboard-preview-img" class="clip" data-start="0" data-duration="14" src="assets/executive_hero_view.png" alt="Executive Dashboard">
+        </div>
+        <div class="callouts" id="dash-callouts">
+          <div class="callout-pill">⚡ 1.11s Scan Time (29,209 Orders)</div>
+          <div class="callout-pill">📊 $7,429,512.21 Live GMV</div>
+          <div class="callout-pill">🔒 100% Client PII Protected</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(".layout > div:first-child, .layout > h2", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.15 }, 0.2);
+      tl.fromTo("#dash-frame", { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 0.5);
+      tl.fromTo(".callout-pill", { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.18, ease: "back.out(1.5)" }, 1.0);
+      tl.to("#dashboard-container", { opacity: 0, scale: 0.96, duration: 0.6, ease: "power2.in" }, 13.2);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["scene_4_dashboard"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

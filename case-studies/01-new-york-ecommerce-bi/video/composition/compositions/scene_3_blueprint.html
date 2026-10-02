@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Scene 3: The 4-Layer Blueprint</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #010A17; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+      #root { width: 100%; height: 100%; position: relative; background: #010A17; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 80px 120px; }
+      
+      .ambient-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; pointer-events: none; }
+      .glow-tr { top: -300px; right: -300px; background: radial-gradient(circle, rgba(0, 117, 201, 0.22) 0%, rgba(1, 10, 23, 0) 70%); }
+      .glow-bl { bottom: -300px; left: -300px; background: radial-gradient(circle, rgba(0, 163, 224, 0.14) 0%, rgba(1, 10, 23, 0) 70%); }
+
+      .watermark { position: absolute; top: 48px; left: 64px; display: flex; align-items: center; gap: 16px; z-index: 100; }
+      .watermark img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(0, 117, 201, 0.5); }
+      .watermark-name { font-size: 18px; font-weight: 700; color: #FFFFFF; }
+      .watermark-sub { font-size: 13px; font-weight: 500; color: #00A3E0; letter-spacing: 0.05em; text-transform: uppercase; }
+
+      .blueprint-container { width: 100%; max-width: 1500px; text-align: center; z-index: 10; }
+      .badge-cyan { font-size: 18px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #00A3E0; background: rgba(0, 163, 224, 0.12); border: 1px solid rgba(0, 163, 224, 0.3); padding: 8px 22px; border-radius: 999px; display: inline-block; margin-bottom: 20px; }
+      h2 { font-size: 64px; font-weight: 800; letter-spacing: -0.03em; }
+      p.sub { font-size: 26px; color: #94A3B8; margin-top: 12px; }
+
+      .arch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+      .arch-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(0, 163, 224, 0.3); border-radius: 20px; padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; text-align: left; backdrop-filter: blur(12px); }
+      .arch-step-num { font-size: 15px; font-weight: 800; color: #00A3E0; background: rgba(0, 163, 224, 0.15); padding: 6px 14px; border-radius: 999px; display: inline-block; }
+      .arch-card-title { font-size: 28px; font-weight: 800; color: #FFFFFF; margin-top: 18px; }
+      .arch-card-tech { font-size: 18px; color: #94A3B8; font-weight: 500; margin-top: 10px; line-height: 1.4; }
+      .arch-card-badge { font-size: 19px; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 10px 18px; border-radius: 12px; text-align: center; margin-top: 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="scene_3_blueprint" data-start="0" data-duration="16" data-width="1920" data-height="1080">
+      <div class="ambient-glow glow-tr" data-layout-allow-overflow></div>
+      <div class="ambient-glow glow-bl" data-layout-allow-overflow></div>
+
+      <div class="watermark">
+        <img id="watermark-avatar-3" class="clip" data-start="0" data-duration="16" src="assets/profile_picture.png" alt="Charlton Smith">
+        <div>
+          <div class="watermark-name">Charlton Smith</div>
+          <div class="watermark-sub">Appleify Automation</div>
+        </div>
+      </div>
+
+      <div class="blueprint-container" id="blueprint-content">
+        <div class="badge-cyan">The Architecture</div>
+        <h2>The 5-Day Open Lakehouse</h2>
+        <p class="sub">Enterprise speed and governance running directly on open cloud standards.</p>
+        <div class="arch-grid">
+          <div class="arch-card" id="ac1">
+            <div>
+              <span class="arch-step-num">01 / STORAGE</span>
+              <div class="arch-card-title">GCS & Parquet</div>
+              <div class="arch-card-tech">Columnar file storage for 30M order rows.</div>
+            </div>
+            <div class="arch-card-badge">$4.80 / mo</div>
+          </div>
+          <div class="arch-card" id="ac2">
+            <div>
+              <span class="arch-step-num">02 / COMPUTE</span>
+              <div class="arch-card-title">Embedded DuckDB</div>
+              <div class="arch-card-tech">Vectorized SQL engine directly in memory.</div>
+            </div>
+            <div class="arch-card-badge">$0 License</div>
+          </div>
+          <div class="arch-card" id="ac3">
+            <div>
+              <span class="arch-step-num">03 / GOVERNANCE</span>
+              <div class="arch-card-title">Cube.js Semantics</div>
+              <div class="arch-card-tech">Metric code governance & pre-aggregations.</div>
+            </div>
+            <div class="arch-card-badge">48ms Latency</div>
+          </div>
+          <div class="arch-card" id="ac4">
+            <div>
+              <span class="arch-step-num">04 / INTERFACE</span>
+              <div class="arch-card-title">Metabase OSS</div>
+              <div class="arch-card-tech">Executive portal on desktop, tablet, and mobile.</div>
+            </div>
+            <div class="arch-card-badge">Unlimited Users ($0)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo(".blueprint-container > div:first-child, .blueprint-container > h2, .blueprint-container > p", { y: -25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.15, ease: "power2.out" }, 0.2);
+      tl.fromTo(".arch-card", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.22, ease: "power3.out" }, 0.8);
+      tl.to("#blueprint-content", { opacity: 0, y: -20, duration: 0.6, ease: "power2.in" }, 15.2);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["scene_3_blueprint"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

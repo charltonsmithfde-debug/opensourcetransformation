@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Scene 1: The Hook</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #010A17; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+      #root { width: 100%; height: 100%; position: relative; background: #010A17; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 80px 120px; }
+      
+      .ambient-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; pointer-events: none; }
+      .glow-tr { top: -300px; right: -300px; background: radial-gradient(circle, rgba(0, 117, 201, 0.22) 0%, rgba(1, 10, 23, 0) 70%); }
+      .glow-bl { bottom: -300px; left: -300px; background: radial-gradient(circle, rgba(0, 163, 224, 0.14) 0%, rgba(1, 10, 23, 0) 70%); }
+
+      .watermark { position: absolute; top: 48px; left: 64px; display: flex; align-items: center; gap: 16px; z-index: 100; }
+      .watermark img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(0, 117, 201, 0.5); }
+      .watermark-name { font-size: 18px; font-weight: 700; color: #FFFFFF; }
+      .watermark-sub { font-size: 13px; font-weight: 500; color: #00A3E0; letter-spacing: 0.05em; text-transform: uppercase; }
+
+      .scene-content { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; z-index: 10; }
+      .hook-badge { font-size: 18px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #00A3E0; background: rgba(0, 163, 224, 0.12); border: 1px solid rgba(0, 163, 224, 0.3); padding: 10px 24px; border-radius: 999px; margin-bottom: 28px; }
+      .hook-title { font-size: 88px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; max-width: 1400px; }
+      .accent-red { color: #EF4444; }
+
+      .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; width: 100%; max-width: 1300px; margin-top: 56px; }
+      .stat-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 32px; text-align: center; backdrop-filter: blur(10px); }
+      .stat-label { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94A3B8; margin-bottom: 8px; }
+      .stat-number { font-size: 54px; font-weight: 900; letter-spacing: -0.03em; color: #FFFFFF; }
+      .stat-card.alert { border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.06); }
+      .stat-card.alert .stat-number { color: #EF4444; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="scene_1_hook" data-start="0" data-duration="14" data-width="1920" data-height="1080">
+      <div class="ambient-glow glow-tr" data-layout-allow-overflow></div>
+      <div class="ambient-glow glow-bl" data-layout-allow-overflow></div>
+
+      <div class="watermark">
+        <img id="watermark-avatar-1" class="clip" data-start="0" data-duration="14" src="assets/profile_picture.png" alt="Charlton Smith">
+        <div>
+          <div class="watermark-name">Charlton Smith</div>
+          <div class="watermark-sub">Appleify Automation</div>
+        </div>
+      </div>
+
+      <div class="scene-content" id="scene-body">
+        <div class="hook-badge" id="badge">Case Study: New York E-Commerce</div>
+        <h1 class="hook-title" id="title">
+          The <span class="accent-red">$210,000</span> Business Intelligence Trap.
+        </h1>
+        <div class="stats-grid">
+          <div class="stat-card" id="stat1">
+            <div class="stat-label">Store Revenue</div>
+            <div class="stat-number">$7,000,000</div>
+          </div>
+          <div class="stat-card" id="stat2">
+            <div class="stat-label">Net Profit Reality</div>
+            <div class="stat-number">$600k – $750k</div>
+          </div>
+          <div class="stat-card alert" id="stat3">
+            <div class="stat-label">Enterprise SaaS Quote</div>
+            <div class="stat-number">$210,000/yr</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#badge", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 0.2);
+      tl.fromTo("#title", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 0.5);
+      tl.fromTo("#stat1", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, 1.0);
+      tl.fromTo("#stat2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, 1.3);
+      tl.fromTo("#stat3", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, 1.6);
+      tl.to("#scene-body", { opacity: 0, y: -20, duration: 0.6, ease: "power2.in" }, 13.2);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["scene_1_hook"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

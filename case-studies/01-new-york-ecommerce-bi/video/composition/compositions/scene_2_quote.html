@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Scene 2: Vendor Quote Breakdown</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #010A17; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+      #root { width: 100%; height: 100%; position: relative; background: #010A17; overflow: hidden; display: flex; justify-content: center; align-items: center; padding: 80px 120px; }
+      
+      .ambient-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; pointer-events: none; }
+      .glow-tr { top: -300px; right: -300px; background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(1, 10, 23, 0) 70%); }
+      .glow-bl { bottom: -300px; left: -300px; background: radial-gradient(circle, rgba(0, 117, 201, 0.14) 0%, rgba(1, 10, 23, 0) 70%); }
+
+      .watermark { position: absolute; top: 48px; left: 64px; display: flex; align-items: center; gap: 16px; z-index: 100; }
+      .watermark img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(0, 117, 201, 0.5); }
+      .watermark-name { font-size: 18px; font-weight: 700; color: #FFFFFF; }
+      .watermark-sub { font-size: 13px; font-weight: 500; color: #00A3E0; letter-spacing: 0.05em; text-transform: uppercase; }
+
+      .breakdown-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; width: 100%; max-width: 1440px; align-items: center; z-index: 10; }
+      .badge-danger { font-size: 18px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #EF4444; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); padding: 8px 20px; border-radius: 999px; display: inline-block; margin-bottom: 24px; }
+      h2 { font-size: 64px; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; }
+      p { font-size: 26px; font-weight: 500; color: #94A3B8; margin-top: 20px; line-height: 1.4; }
+
+      .quote-list { display: flex; flex-direction: column; gap: 16px; }
+      .quote-item { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
+      .quote-item.danger { border-color: rgba(239, 68, 68, 0.35); background: rgba(239, 68, 68, 0.06); }
+      .quote-name { font-size: 22px; font-weight: 600; color: #E2E8F0; }
+      .quote-price { font-size: 24px; font-weight: 800; color: #EF4444; }
+      .quote-total { margin-top: 10px; padding: 22px 28px; background: rgba(239, 68, 68, 0.14); border: 2px solid #EF4444; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="scene_2_quote" data-start="0" data-duration="14" data-width="1920" data-height="1080">
+      <div class="ambient-glow glow-tr" data-layout-allow-overflow></div>
+      <div class="ambient-glow glow-bl" data-layout-allow-overflow></div>
+
+      <div class="watermark">
+        <img id="watermark-avatar-2" class="clip" data-start="0" data-duration="14" src="assets/profile_picture.png" alt="Charlton Smith">
+        <div>
+          <div class="watermark-name">Charlton Smith</div>
+          <div class="watermark-sub">Appleify Automation</div>
+        </div>
+      </div>
+
+      <div class="breakdown-layout" id="breakdown-container">
+        <div id="left-header">
+          <div class="badge-danger">The Markup Dissected</div>
+          <h2>Where Does $210,000 Go?</h2>
+          <p>Every tool adds an arbitrary layer of recurring overhead before writing a single dashboard query.</p>
+        </div>
+        <div class="quote-list" id="quote-items">
+          <div class="quote-item" id="q1">
+            <span class="quote-name">Snowflake Cloud Warehouse</span>
+            <span class="quote-price">$42,000/yr</span>
+          </div>
+          <div class="quote-item" id="q2">
+            <span class="quote-name">Power BI / Looker Seat Licenses</span>
+            <span class="quote-price">$36,000/yr</span>
+          </div>
+          <div class="quote-item" id="q3">
+            <span class="quote-name">Fivetran Connectors</span>
+            <span class="quote-price">$24,000/yr</span>
+          </div>
+          <div class="quote-item" id="q4">
+            <span class="quote-name">dbt Cloud Orchestration</span>
+            <span class="quote-price">$18,000/yr</span>
+          </div>
+          <div class="quote-item danger" id="q5">
+            <span class="quote-name">NYC Analytics Engineer Salary</span>
+            <span class="quote-price">$160,000/yr</span>
+          </div>
+          <div class="quote-total" id="q-total">
+            <span style="font-size: 24px; font-weight: 700; color: #FFFFFF;">Total Year 1 Commitment:</span>
+            <span style="font-size: 36px; font-weight: 900; color: #EF4444;">$370,000+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#left-header", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, 0.2);
+      tl.fromTo(".quote-item", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, stagger: 0.18, ease: "power2.out" }, 0.4);
+      tl.fromTo("#q-total", { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.5)" }, 1.5);
+      tl.to("#breakdown-container", { opacity: 0, x: -30, duration: 0.6, ease: "power2.in" }, 13.2);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["scene_2_quote"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
