@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appleify Automation | E-Commerce Intelligence Portal ($1,000 BI Stack)</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js Standalone Local Bundle (Zero Network Dependency) -->
+  <script src="chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- 1. Top Utility Bar -->
+  <header class="utility-bar">
+    <div class="utility-links">
+      <a href="#" class="utility-link active">E-Commerce Analytics</a>
+      <a href="#" class="utility-link">Direct-to-Consumer (DTC)</a>
+      <a href="#" class="utility-link">Amazon FBA &amp; Marketplace</a>
+      <a href="#" class="utility-link">Wholesale B2B</a>
+    </div>
+    <div class="utility-right">
+      <span class="region-tag">🌐 MULTI-CHANNEL STOREFRONTS</span>
+      <a href="#" class="utility-link">System Documentation</a>
+    </div>
+  </header>
+
+  <!-- 2. Main Brand Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-area">
+        <!-- Brand Mark with Blurred Company Name -->
+        <svg class="brand-logo-svg" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="38" height="38" rx="8" fill="#010A17"/>
+          <path d="M19 8L28 24H10L19 8Z" fill="#0075C9"/>
+          <circle cx="19" cy="27" r="3.5" fill="#00A3E0"/>
+          <g class="blurred-brand">
+            <text x="48" y="24" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="20" fill="#010A17" letter-spacing="-0.03em">Company Brand</text>
+            <text x="48" y="36" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#0075C9" letter-spacing="0.12em">AUTOMATION</text>
+          </g>
+        </svg>
+        <span class="portal-badge">Lakehouse BI Replica</span>
+      </div>
+
+      <!-- Controls & Governance -->
+      <div class="header-controls">
+        <div class="role-badge" title="Resolved Executive Role">
+          <span>👤</span>
+          <span id="roleDisplay">Head of E-Commerce / Operations</span>
+        </div>
+
+        <div class="governance-pill" title="Customer Identifiers Cryptographically Masked">
+          <span>🛡️</span>
+          <span>GDPR / CCPA Masked</span>
+        </div>
+
+        <div class="lakehouse-status" title="Direct DuckDB + GCS Parquet connection active">
+          <span class="status-dot"></span>
+          <span id="lakehouseStatusText">DuckLake 100% Ready (1.11s)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Sub-Navigation / Filter Bar -->
+  <nav class="sub-nav-bar">
+    <div class="sub-nav-container">
+      <div class="view-tabs">
+        <button class="view-tab active" data-view="overview">Executive Command Center</button>
+        <button class="view-tab" data-view="categories">Cosmetics Category Performance</button>
+        <button class="view-tab" data-view="funnel">Checkout Funnel &amp; Recovery</button>
+      </div>
+
+      <div class="filter-group">
+        <label for="channelFilter" style="font-size: 12px; font-weight: 600; color: var(--text-secondary);">Channel:</label>
+        <select id="channelFilter" class="filter-select">
+          <option value="all">All Channels (Shopify, Amazon, B2B)</option>
+          <option value="shopify">Shopify DTC Storefront</option>
+          <option value="amazon">Amazon FBA Marketplace</option>
+          <option value="wholesale">Wholesale Salons &amp; Boutiques</option>
+        </select>
+
+        <label for="dateFilter" style="font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-left: 8px;">Date Range:</label>
+        <select id="dateFilter" class="filter-select">
+          <option value="ytd">Year-to-Date (YTD)</option>
+          <option value="q3">Q3 Rolling Quarter</option>
+          <option value="30d">Last 30 Days</option>
+        </select>
+
+        <button id="btnRefresh" class="btn-refresh">
+          <span>⚡</span> Re-Scan Parquet
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 4. Telemetry Bar -->
+  <aside class="telemetry-strip">
+    <div class="telemetry-container">
+      <div class="telemetry-item">
+        <span>Engine:</span>
+        <span class="telemetry-val">DuckDB v1.1.0 (In-Memory)</span>
+      </div>
+      <div class="telemetry-item">
+        <span>Lakehouse Source:</span>
+        <span class="telemetry-val">GCS Parquet (29.2M Raw Rows)</span>
+      </div>
+      <div class="telemetry-item">
+        <span>Display Scale:</span>
+        <span class="telemetry-val">Values /1,000 | Counts /1,000</span>
+      </div>
+      <div class="telemetry-item">
+        <span>Semantic Layer:</span>
+        <span class="telemetry-val">Cube.js SQL API (5435)</span>
+      </div>
+      <div class="telemetry-item">
+        <span>Last Scan Latency:</span>
+        <span id="telemetryLatency" class="telemetry-val">1.11s</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 5. Main Content Area -->
+  <main class="main-content">
+    
+    <div class="dashboard-header-title">
+      <h1>E-Commerce Executive Command Center ($1,000 BI Stack)</h1>
+      <p>Live Metabase Report Replica | Scaled for Mid-Market Beauty &amp; Cosmetics Multi-Channel Operations</p>
+    </div>
+
+    <!-- 6. Metabase Replica KPI Cards (Mapped & Scaled) -->
+    <section class="kpi-grid">
+      
+      <!-- Card 1: Total Orders Processed -->
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Total Orders Processed</span>
+          <span class="kpi-tag">Trans. Count</span>
+        </div>
+        <div id="kpiOrders" class="kpi-value">29,209</div>
+        <div class="kpi-footer">
+          <span class="trend-badge positive">↑ 18.4%</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Total Active Customers -->
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Active Beauty Customers</span>
+          <span class="kpi-tag">Unique</span>
+        </div>
+        <div id="kpiCustomers" class="kpi-value">14,738</div>
+        <div class="kpi-footer">
+          <span class="trend-badge positive">↑ 12.8%</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Gross Merchandise Value (GMV) -->
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Gross Merchandise Value</span>
+          <span class="kpi-tag">Net GMV</span>
+        </div>
+        <div id="kpiGmv" class="kpi-value">$7,429,512.21</div>
+        <div class="kpi-footer">
+          <span class="trend-badge positive">↑ 14.2%</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Average Order Value (AOV) -->
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Average Order Value (AOV)</span>
+          <span class="kpi-tag">Efficiency</span>
+        </div>
+        <div id="kpiAov" class="kpi-value">$254.35</div>
+        <div class="kpi-footer">
+          <span class="trend-badge neutral">↔ Steady</span>
+        </div>
+      </div>
+
+      <!-- Card 5: Checkout Recovery Potential -->
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-title">Funnel Abandonment Value</span>
+          <span class="kpi-tag" style="background:#FEE2E2; color:#B91C1C;">Recovery</span>
+        </div>
+        <div id="kpiAbandonedGmv" class="kpi-value">$7,221.14</div>
+        <div class="kpi-footer">
+          <span class="trend-badge" style="background:#FEF3C7; color:#B45309;">130 Sessions</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 7. Metabase Duplicate Replica Visual Charts -->
+    <section class="analytics-grid-two">
+      
+      <!-- Chart 1: Multi-Channel Sales Distribution -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-group">
+            <h2>Multi-Channel Order Volume</h2>
+            <p>Metabase Card 42 Replica: Direct Storefront vs Amazon FBA vs Wholesale</p>
+          </div>
+        </div>
+        <div class="chart-container-box">
+          <canvas id="channelChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Chart 2: Cosmetic Category Revenue Share -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-group">
+            <h2>Cosmetics Category GMV Share</h2>
+            <p>Product Mix: Skincare, Color Cosmetics, Hair, Fragrance, Bath</p>
+          </div>
+        </div>
+        <div class="chart-container-box">
+          <canvas id="categoryChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Chart 3: Monthly GMV & Velocity Trend -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-group">
+            <h2>Monthly Revenue &amp; Order Velocity</h2>
+            <p>12-Month Performance Curve across all Sales Channels</p>
+          </div>
+        </div>
+        <div class="chart-container-box">
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Chart 4: Checkout Funnel Drop-off -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-group">
+            <h2>Checkout Funnel Conversion Stages</h2>
+            <p>Metabase Card 44 Replica: Sessions &amp; Cart Drop-off (Scaled /100)</p>
+          </div>
+        </div>
+        <div class="chart-container-box">
+          <canvas id="funnelChart"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 8. Detailed Data Table (Cosmetic Product Lines) -->
+    <section class="table-card">
+      <div class="table-header-bar">
+        <div class="chart-title-group">
+          <h2>Top Performing Cosmetic SKUs &amp; Product Lines</h2>
+          <p>Metabase Card 43 Replica: Catalog Depth, Order Velocity &amp; Revenue</p>
+        </div>
+        <div class="table-actions">
+          <input type="text" id="tableSearch" class="table-search" placeholder="Filter SKU or Product...">
+          <button id="btnExportCsv" class="btn-export">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>SKU Code</th>
+              <th>Product Line &amp; Description</th>
+              <th>Category</th>
+              <th>Inventory Status</th>
+              <th>Units Sold</th>
+              <th>Unit Price</th>
+              <th>Total GMV</th>
+              <th>Conversion Rate</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody">
+            <!-- Rendered dynamically by app.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 9. App Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-copy">© 2026 Appleify Automation Ltd. All rights reserved.</span>
+        <span>•</span>
+        <span>$1,000 Enterprise BI Architecture</span>
+      </div>
+      <div>
+        <span>Built with DuckDB • Cube.js • Google Cloud Storage • Chart.js</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
