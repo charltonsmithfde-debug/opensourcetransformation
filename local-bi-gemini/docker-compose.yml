@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  cube:
+    image: cubejs/cube:latest
+    container_name: local-bi-cube
+    ports:
+      - "4000:4000"
+      - "5432:5432"
+    environment:
+      - NODE_ENV=development
+      - CUBEJS_DEV_MODE=true
+      - CUBEJS_DB_TYPE=duckdb
+      - CUBEJS_PORT=4000
+      - CUBEJS_PG_SQL_PORT=5432
+      - CUBEJS_API_SECRET=supersecretlocalbigeminiauthkey998877
+      - CUBEJS_DB_DUCKDB_S3_ACCESS_KEY_ID=
+      - CUBEJS_DB_DUCKDB_S3_SECRET_ACCESS_KEY=
+      - DUCKLAKE_GCS_BUCKET=scbi-ducklake-myanalyticsproduct
+      - CUBEJS_CACHE_AND_QUEUE_DRIVER=memory
+      - CUBEJS_SQL_USERS={"metabase_analyst":{"password":"scrypt:d845929c592d37ea:30a7f3e890959518715be2a0c45d0548ff27b4f1680978384ee219b9abae7efa","role":"ROLE_ECOMMERCE_ANALYST"},"executive":{"password":"scrypt:d845929c592d37ea:30a7f3e890959518715be2a0c45d0548ff27b4f1680978384ee219b9abae7efa","role":"ROLE_ECOMMERCE_EXECUTIVE"}}
+    volumes:
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+      - /home/charlton/local-bi-gemini/cube:/cube/conf
+    restart: unless-stopped
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: local-bi-metabase
+    ports:
+      - "3000:3000"
+    environment:
+      - MB_DB_FILE=/metabase-data/metabase.db
+    volumes:
+      - /home/charlton/local-bi-gemini/metabase-data:/metabase-data
+    depends_on:
+      - cube
+    restart: unless-stopped
