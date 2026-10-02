@@ -2,7 +2,7 @@
  * app.js
  * Appleify Automation - E-Commerce Intelligence Portal
  * Client application replicating Metabase Dashboard 2 with cosmetic industry mapping
- * Mathematical Scaling: Values /1,000 | Customer & Order Counts /100 | Funnel Sessions /100
+ * Mathematical Scaling: Values /1,000 (USD $) | Order Counts /1,000 | Funnel Sessions /1,000
  */
 
 // Cosmetic Products Dataset (Mapped from live GCS catalog depth)
@@ -13,9 +13,9 @@ const COSMETIC_PRODUCTS = [
     category: "Skincare & Serums",
     status: "in-stock",
     statusLabel: "In Stock (4,210)",
-    orders: 3420,
+    orders: 342,
     price: 254.00,
-    gmv: 868680.00,
+    gmv: 86868.00,
     conversion: "4.8%"
   },
   {
@@ -24,9 +24,9 @@ const COSMETIC_PRODUCTS = [
     category: "Color Cosmetics",
     status: "in-stock",
     statusLabel: "In Stock (2,840)",
-    orders: 2890,
+    orders: 289,
     price: 179.00,
-    gmv: 517310.00,
+    gmv: 51731.00,
     conversion: "5.2%"
   },
   {
@@ -35,9 +35,9 @@ const COSMETIC_PRODUCTS = [
     category: "Skincare & Serums",
     status: "in-stock",
     statusLabel: "In Stock (1,950)",
-    orders: 2410,
+    orders: 241,
     price: 290.00,
-    gmv: 698900.00,
+    gmv: 69890.00,
     conversion: "3.9%"
   },
   {
@@ -46,9 +46,9 @@ const COSMETIC_PRODUCTS = [
     category: "Skincare & Serums",
     status: "in-stock",
     statusLabel: "In Stock (3,120)",
-    orders: 2150,
+    orders: 215,
     price: 179.00,
-    gmv: 384850.00,
+    gmv: 38485.00,
     conversion: "4.1%"
   },
   {
@@ -57,9 +57,9 @@ const COSMETIC_PRODUCTS = [
     category: "Hair Care & Treatments",
     status: "low-stock",
     statusLabel: "Low Stock (310)",
-    orders: 1940,
+    orders: 194,
     price: 249.00,
-    gmv: 483060.00,
+    gmv: 48306.00,
     conversion: "3.5%"
   },
   {
@@ -68,9 +68,9 @@ const COSMETIC_PRODUCTS = [
     category: "Bath, Body & SPF",
     status: "in-stock",
     statusLabel: "In Stock (5,600)",
-    orders: 1820,
+    orders: 182,
     price: 249.00,
-    gmv: 453180.00,
+    gmv: 45318.00,
     conversion: "4.6%"
   },
   {
@@ -79,9 +79,9 @@ const COSMETIC_PRODUCTS = [
     category: "Skincare & Serums",
     status: "in-stock",
     statusLabel: "In Stock (1,480)",
-    orders: 1650,
+    orders: 165,
     price: 449.00,
-    gmv: 740850.00,
+    gmv: 74085.00,
     conversion: "3.1%"
   },
   {
@@ -90,9 +90,9 @@ const COSMETIC_PRODUCTS = [
     category: "Skincare & Serums",
     status: "in-stock",
     statusLabel: "In Stock (3,800)",
-    orders: 1510,
+    orders: 151,
     price: 198.00,
-    gmv: 298980.00,
+    gmv: 29898.00,
     conversion: "4.9%"
   }
 ];
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initCharts() {
-  // Chart 1: Multi-Channel Sales Distribution (Metabase Card 42 Replica)
+  // Chart 1: Multi-Channel Sales Distribution (Orders / 1000)
   const ctxChannel = document.getElementById("channelChart").getContext("2d");
   charts.channel = new Chart(ctxChannel, {
     type: "bar",
@@ -118,7 +118,7 @@ function initCharts() {
       ],
       datasets: [{
         label: "Processed Orders",
-        data: [233674, 43814, 14605],
+        data: [23367, 4381, 1461],
         backgroundColor: [
           "#0075C9",
           "#00A3E0",
@@ -135,7 +135,7 @@ function initCharts() {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: (ctx) => `Orders: ${ctx.raw.toLocaleString()} (${((ctx.raw / 292093) * 100).toFixed(1)}%)`
+            label: (ctx) => `Orders: ${ctx.raw.toLocaleString()} (${((ctx.raw / 29209) * 100).toFixed(1)}%)`
           }
         }
       },
@@ -154,7 +154,7 @@ function initCharts() {
     }
   });
 
-  // Chart 2: Cosmetic Category Revenue Share (Doughnut)
+  // Chart 2: Cosmetic Category Revenue Share (Doughnut in USD $)
   const ctxCategory = document.getElementById("categoryChart").getContext("2d");
   charts.category = new Chart(ctxCategory, {
     type: "doughnut",
@@ -189,7 +189,7 @@ function initCharts() {
         },
         tooltip: {
           callbacks: {
-            label: (ctx) => `GMV: R ${ctx.raw.toLocaleString()} (${((ctx.raw / 7429512) * 100).toFixed(1)}%)`
+            label: (ctx) => `GMV: $${ctx.raw.toLocaleString()} (${((ctx.raw / 7429512) * 100).toFixed(1)}%)`
           }
         }
       },
@@ -197,14 +197,14 @@ function initCharts() {
     }
   });
 
-  // Chart 3: Monthly GMV & Velocity Trend
+  // Chart 3: Monthly GMV & Velocity Trend (USD $)
   const ctxTrend = document.getElementById("trendChart").getContext("2d");
   charts.trend = new Chart(ctxTrend, {
     type: "line",
     data: {
       labels: ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
       datasets: [{
-        label: "Monthly GMV (Rands)",
+        label: "Monthly GMV (USD)",
         data: [540000, 780000, 510000, 560000, 595000, 620000, 645000, 690000, 710000, 730000, 755000, 794512],
         borderColor: "#0075C9",
         backgroundColor: "rgba(0, 117, 201, 0.08)",
@@ -222,7 +222,7 @@ function initCharts() {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: (ctx) => `GMV: R ${ctx.raw.toLocaleString()}`
+            label: (ctx) => `GMV: $${ctx.raw.toLocaleString()}`
           }
         }
       },
@@ -231,7 +231,7 @@ function initCharts() {
           beginAtZero: false,
           grid: { color: "#F1F5F9" },
           ticks: {
-            callback: (val) => `R ${(val / 1000).toFixed(0)}k`
+            callback: (val) => `$${(val / 1000).toFixed(0)}k`
           }
         },
         x: {
@@ -241,7 +241,7 @@ function initCharts() {
     }
   });
 
-  // Chart 4: Checkout Funnel Drop-off (Metabase Card 44 Replica)
+  // Chart 4: Checkout Funnel Drop-off (Sessions / 1000)
   const ctxFunnel = document.getElementById("funnelChart").getContext("2d");
   charts.funnel = new Chart(ctxFunnel, {
     type: "bar",
@@ -254,8 +254,8 @@ function initCharts() {
         "Abandoned at Shipping"
       ],
       datasets: [{
-        label: "Sessions (Scaled /100)",
-        data: [12850, 7420, 4140, 2841, 1299],
+        label: "Sessions (Scaled /1000)",
+        data: [1285, 742, 414, 284, 130],
         backgroundColor: [
           "#0075C9",
           "#00A3E0",
@@ -275,7 +275,7 @@ function initCharts() {
           callbacks: {
             label: (ctx) => {
               if (ctx.label === "Abandoned at Shipping") {
-                return `Abandoned: ${ctx.raw.toLocaleString()} sessions (Cart Value: R 7,221,142.24)`;
+                return `Abandoned: 130 sessions (Value: $7,221.14)`;
               }
               return `Sessions: ${ctx.raw.toLocaleString()}`;
             }
@@ -307,8 +307,8 @@ function renderProductTable(products) {
       <td>${p.category}</td>
       <td><span class="badge-stock ${p.status}">${p.statusLabel}</span></td>
       <td>${p.orders.toLocaleString()}</td>
-      <td>R ${p.price.toFixed(2)}</td>
-      <td><strong>R ${p.gmv.toLocaleString(undefined, {minimumFractionDigits: 2})}</strong></td>
+      <td>$${p.price.toFixed(2)}</td>
+      <td><strong>$${p.gmv.toLocaleString(undefined, {minimumFractionDigits: 2})}</strong></td>
       <td><span style="color: #15803D; font-weight: 600;">${p.conversion}</span></td>
     `;
     tbody.appendChild(tr);
@@ -360,17 +360,17 @@ function simulateFilterChange(channel) {
   const kpiOrders = document.getElementById("kpiOrders");
 
   if (channel === "shopify") {
-    kpiGmv.textContent = "R 5,943,609.77";
-    kpiOrders.textContent = "233,674";
+    kpiGmv.textContent = "$5,943,609.77";
+    kpiOrders.textContent = "23,367";
   } else if (channel === "amazon") {
-    kpiGmv.textContent = "R 1,114,426.83";
-    kpiOrders.textContent = "43,814";
+    kpiGmv.textContent = "$1,114,426.83";
+    kpiOrders.textContent = "4,381";
   } else if (channel === "wholesale") {
-    kpiGmv.textContent = "R 371,475.61";
-    kpiOrders.textContent = "14,605";
+    kpiGmv.textContent = "$371,475.61";
+    kpiOrders.textContent = "1,461";
   } else {
-    kpiGmv.textContent = "R 7,429,512.21";
-    kpiOrders.textContent = "292,093";
+    kpiGmv.textContent = "$7,429,512.21";
+    kpiOrders.textContent = "29,209";
   }
 }
 
@@ -384,7 +384,7 @@ function exportToCsv() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.setAttribute("href", url);
-  link.setAttribute("download", `appleify_cosmetics_report_${new Date().toISOString().slice(0, 10)}.csv`);
+  link.setAttribute("download", `cosmetics_report_${new Date().toISOString().slice(0, 10)}.csv`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

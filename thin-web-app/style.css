@@ -137,6 +137,14 @@ body {
   flex-direction: column;
 }
 
+/* Company Name Blur Effect */
+.blurred-brand {
+  filter: blur(8px);
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
 .brand-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;

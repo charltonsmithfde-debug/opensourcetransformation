@@ -28,13 +28,15 @@
   <header class="app-header">
     <div class="header-container">
       <div class="brand-area">
-        <!-- Appleify Automation Brand Mark -->
+        <!-- Brand Mark with Blurred Company Name -->
         <svg class="brand-logo-svg" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="38" height="38" rx="8" fill="#010A17"/>
           <path d="M19 8L28 24H10L19 8Z" fill="#0075C9"/>
           <circle cx="19" cy="27" r="3.5" fill="#00A3E0"/>
-          <text x="48" y="24" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="20" fill="#010A17" letter-spacing="-0.03em">Appleify</text>
-          <text x="48" y="36" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#0075C9" letter-spacing="0.12em">AUTOMATION</text>
+          <g class="blurred-brand">
+            <text x="48" y="24" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="20" fill="#010A17" letter-spacing="-0.03em">Company Brand</text>
+            <text x="48" y="36" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#0075C9" letter-spacing="0.12em">AUTOMATION</text>
+          </g>
         </svg>
         <span class="portal-badge">Lakehouse BI Replica</span>
       </div>
@@ -104,7 +106,7 @@
       </div>
       <div class="telemetry-item">
         <span>Display Scale:</span>
-        <span class="telemetry-val">Values /1,000 | Counts /100</span>
+        <span class="telemetry-val">Values /1,000 | Counts /1,000</span>
       </div>
       <div class="telemetry-item">
         <span>Semantic Layer:</span>
@@ -134,10 +136,9 @@
           <span class="kpi-title">Total Orders Processed</span>
           <span class="kpi-tag">Trans. Count</span>
         </div>
-        <div id="kpiOrders" class="kpi-value">292,093</div>
+        <div id="kpiOrders" class="kpi-value">29,209</div>
         <div class="kpi-footer">
           <span class="trend-badge positive">↑ 18.4%</span>
-          <span>vs previous quarter (29.2M live raw)</span>
         </div>
       </div>
 
@@ -150,7 +151,6 @@
         <div id="kpiCustomers" class="kpi-value">14,738</div>
         <div class="kpi-footer">
           <span class="trend-badge positive">↑ 12.8%</span>
-          <span>1.47M raw scaled (/100)</span>
         </div>
       </div>
 
@@ -160,10 +160,9 @@
           <span class="kpi-title">Gross Merchandise Value</span>
           <span class="kpi-tag">Net GMV</span>
         </div>
-        <div id="kpiGmv" class="kpi-value">R 7,429,512.21</div>
+        <div id="kpiGmv" class="kpi-value">$7,429,512.21</div>
         <div class="kpi-footer">
           <span class="trend-badge positive">↑ 14.2%</span>
-          <span>R 7.43B raw scaled (/1,000)</span>
         </div>
       </div>
 
@@ -173,10 +172,9 @@
           <span class="kpi-title">Average Order Value (AOV)</span>
           <span class="kpi-tag">Efficiency</span>
         </div>
-        <div id="kpiAov" class="kpi-value">R 254.35</div>
+        <div id="kpiAov" class="kpi-value">$254.35</div>
         <div class="kpi-footer">
           <span class="trend-badge neutral">↔ Steady</span>
-          <span>3.2 items avg basket size</span>
         </div>
       </div>
 
@@ -186,10 +184,9 @@
           <span class="kpi-title">Funnel Abandonment Value</span>
           <span class="kpi-tag" style="background:#FEE2E2; color:#B91C1C;">Recovery</span>
         </div>
-        <div id="kpiAbandonedGmv" class="kpi-value">R 7,221,142.24</div>
+        <div id="kpiAbandonedGmv" class="kpi-value">$7,221.14</div>
         <div class="kpi-footer">
-          <span class="trend-badge" style="background:#FEF3C7; color:#B45309;">1,299 Sessions</span>
-          <span>Target for Automated Klaviyo Flows</span>
+          <span class="trend-badge" style="background:#FEF3C7; color:#B45309;">130 Sessions</span>
         </div>
       </div>
 
