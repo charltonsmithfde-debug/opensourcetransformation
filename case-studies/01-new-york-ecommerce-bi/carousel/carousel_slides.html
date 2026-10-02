@@ -89,7 +89,7 @@
       width: 100%;
     }
 
-    /* Scroll Mode: All 10 slides vertically centered */
+    /* Scroll Mode: All 11 slides vertically centered */
     .carousel-container.scroll-mode .slide-wrapper {
       display: block;
       transform: scale(0.68);
@@ -133,7 +133,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 100px 92px;
+      padding: 96px 88px;
       position: relative;
       overflow: hidden;
     }
@@ -202,7 +202,7 @@
       flex-direction: column;
       justify-content: center;
       z-index: 10;
-      gap: 36px;
+      gap: 32px;
     }
 
     /* Giant Metrics */
@@ -217,13 +217,8 @@
       gap: 12px;
     }
 
-    .hero-metric.highlight-cyan {
-      color: #00A3E0;
-    }
-
-    .hero-metric.highlight-emerald {
-      color: #10B981;
-    }
+    .hero-metric.highlight-cyan { color: #00A3E0; }
+    .hero-metric.highlight-emerald { color: #10B981; }
 
     .metric-unit {
       font-size: 38px;
@@ -242,19 +237,17 @@
 
     /* Typography */
     .slide-headline {
-      font-size: 58px;
+      font-size: 56px;
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.03em;
       color: #FFFFFF;
     }
 
-    .slide-headline span.accent {
-      color: #00A3E0;
-    }
+    .slide-headline span.accent { color: #00A3E0; }
 
     .slide-subheadline {
-      font-size: 30px;
+      font-size: 28px;
       font-weight: 500;
       line-height: 1.45;
       color: #94A3B8;
@@ -265,7 +258,7 @@
     .bullet-cards-stack {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
       margin-top: 10px;
     }
 
@@ -309,7 +302,7 @@
       margin-top: 4px;
     }
 
-    /* Comparison Dual Cards (Slide 3 & 9) */
+    /* Comparison Dual Cards */
     .dual-cards-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -340,9 +333,7 @@
       color: #94A3B8;
     }
 
-    .comp-title.accent {
-      color: #00A3E0;
-    }
+    .comp-title.accent { color: #00A3E0; }
 
     .comp-price {
       font-size: 46px;
@@ -351,9 +342,7 @@
       letter-spacing: -0.02em;
     }
 
-    .comp-price.accent {
-      color: #10B981;
-    }
+    .comp-price.accent { color: #10B981; }
 
     .comp-list {
       list-style: none;
@@ -452,7 +441,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 30px;
+      padding-top: 28px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       z-index: 10;
     }
@@ -505,12 +494,12 @@
 
   <!-- Reviewer Navigation Toolbar -->
   <div class="review-toolbar">
-    <span class="toolbar-title">Story 01: 10-Slide Carousel</span>
+    <span class="toolbar-title">Story 01: 11-Slide Carousel</span>
     <button class="toolbar-btn" id="scrollModeBtn" onclick="setMode('scroll')">Continuous Scroll</button>
     <button class="toolbar-btn active" id="singleModeBtn" onclick="setMode('single')">Single Slide Mode</button>
     <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.15); margin: 0 4px;"></div>
     <button class="toolbar-btn" id="prevBtn" onclick="prevSlide()">← Prev</button>
-    <span class="slide-counter" id="slideIndicator">Slide 1 / 10</span>
+    <span class="slide-counter" id="slideIndicator">Slide 1 / 11</span>
     <button class="toolbar-btn" id="nextBtn" onclick="nextSlide()">Next →</button>
   </div>
 
@@ -522,7 +511,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">Executive Case Study</span>
-          <span class="slide-num-pill">01 / 10</span>
+          <span class="slide-num-pill">01 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -559,7 +548,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">01 / The Vendor Quote</span>
-          <span class="slide-num-pill">02 / 10</span>
+          <span class="slide-num-pill">02 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -600,7 +589,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">02 / The Dilemma</span>
-          <span class="slide-num-pill">03 / 10</span>
+          <span class="slide-num-pill">03 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -647,7 +636,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">03 / The Blueprint</span>
-          <span class="slide-num-pill">04 / 10</span>
+          <span class="slide-num-pill">04 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -717,7 +706,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">04 / Layer 1: Storage</span>
-          <span class="slide-num-pill">05 / 10</span>
+          <span class="slide-num-pill">05 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -758,7 +747,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">05 / Layer 2: Compute</span>
-          <span class="slide-num-pill">06 / 10</span>
+          <span class="slide-num-pill">06 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -799,7 +788,7 @@
       <div class="slide-canvas">
         <div class="slide-header">
           <span class="eyebrow-tag">06 / Layer 3: Governance</span>
-          <span class="slide-num-pill">07 / 10</span>
+          <span class="slide-num-pill">07 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -835,12 +824,49 @@
       </div>
     </div>
 
-    <!-- ==================== SLIDE 8: INTERFACE LAYER ==================== -->
+    <!-- ==================== SLIDE 8: LIVE DASHBOARD SCREENSHOT ==================== -->
     <div class="slide-wrapper" id="slide-8">
       <div class="slide-canvas">
         <div class="slide-header">
-          <span class="eyebrow-tag">07 / Layer 4: Interface</span>
-          <span class="slide-num-pill">08 / 10</span>
+          <span class="eyebrow-tag">07 / Executive Dashboard</span>
+          <span class="slide-num-pill">08 / 11</span>
+        </div>
+
+        <div class="slide-body" style="gap: 22px;">
+          <h2 class="slide-headline" style="font-size: 46px;">
+            The Executive Command Center.
+          </h2>
+          <p class="slide-subheadline" style="font-size: 22px; margin-top: -12px;">
+            Live multi-channel visibility across Shopify, Amazon, and Wholesale.
+          </p>
+
+          <div style="position: relative; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0, 163, 224, 0.35); box-shadow: 0 20px 50px rgba(0,0,0,0.8); background: #070D18;">
+            <img src="executive_hero_view.png" alt="Executive Dashboard" style="width: 100%; display: block; border-radius: 14px;">
+          </div>
+
+          <div style="display: flex; gap: 16px; justify-content: center; margin-top: 4px;">
+            <div class="bullet-card" style="padding: 14px 20px; flex: 1; justify-content: center;">
+              <span style="font-size: 18px; font-weight: 700; color: #00A3E0;">⚡ 1.11s Scan Time</span>
+            </div>
+            <div class="bullet-card" style="padding: 14px 20px; flex: 1; justify-content: center;">
+              <span style="font-size: 18px; font-weight: 700; color: #10B981;">✓ 100% Client Data Privacy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="footer-brand">Appleify Automation</span>
+          <span class="swipe-pill">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SLIDE 9: INTERFACE LAYER ==================== -->
+    <div class="slide-wrapper" id="slide-9">
+      <div class="slide-canvas">
+        <div class="slide-header">
+          <span class="eyebrow-tag">08 / Layer 4: Interface</span>
+          <span class="slide-num-pill">09 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -876,12 +902,12 @@
       </div>
     </div>
 
-    <!-- ==================== SLIDE 9: THE NUMBERS ==================== -->
-    <div class="slide-wrapper" id="slide-9">
+    <!-- ==================== SLIDE 10: THE NUMBERS ==================== -->
+    <div class="slide-wrapper" id="slide-10">
       <div class="slide-canvas">
         <div class="slide-header">
-          <span class="eyebrow-tag">08 / Cost Comparison</span>
-          <span class="slide-num-pill">09 / 10</span>
+          <span class="eyebrow-tag">09 / Cost Comparison</span>
+          <span class="slide-num-pill">10 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -921,12 +947,12 @@
       </div>
     </div>
 
-    <!-- ==================== SLIDE 10: TAKEAWAYS ==================== -->
-    <div class="slide-wrapper" id="slide-10">
+    <!-- ==================== SLIDE 11: TAKEAWAYS ==================== -->
+    <div class="slide-wrapper" id="slide-11">
       <div class="slide-canvas">
         <div class="slide-header">
-          <span class="eyebrow-tag">09 / Key Takeaways</span>
-          <span class="slide-num-pill">10 / 10</span>
+          <span class="eyebrow-tag">10 / Key Takeaways</span>
+          <span class="slide-num-pill">11 / 11</span>
         </div>
 
         <div class="slide-body">
@@ -978,7 +1004,7 @@
 
   <script>
     let currentSlide = 1;
-    const totalSlides = 10;
+    const totalSlides = 11;
     let mode = 'single'; // 'single' or 'scroll'
 
     function updateSlide() {
@@ -1024,7 +1050,7 @@
         singleBtn.classList.remove('active');
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
-        indicator.textContent = 'All 10 Slides';
+        indicator.textContent = 'All 11 Slides';
         slides.forEach(s => s.classList.add('active'));
       } else {
         container.className = 'carousel-container single-mode';
